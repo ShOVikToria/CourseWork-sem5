@@ -40,29 +40,40 @@ namespace ScanwordGenerator
 
         private void ButtonGenerate_Click(object sender, EventArgs e)
         {
+            // 1. Перевірка словника
             if (!_service.IsDictionaryLoaded)
             {
                 MessageBox.Show("Словник не завантажено!");
                 return;
             }
 
-            // ЗМІНА 3: Отримуємо розміри з новою логікою (Random)
+            // 2. Отримання налаштувань
             var (w, h) = GetSelectedSize();
+            bool useImages = checkBox_Pictures.Checked;
 
+            // 3. Вмикаємо годинник (очікування)
             Cursor.Current = Cursors.WaitCursor;
 
-            _currentGrid = _service.GenerateBestGrid(w, h, attempts: 50);
-
-            if (_currentGrid != null)
+            try
             {
-                UpdateImage();
-            }
-            else
-            {
-                MessageBox.Show($"Не вдалося згенерувати сканворд розміром {w}x{h}. Спробуйте ще раз.");
-            }
+                // 4. Запуск генерації
+                _currentGrid = _service.GenerateBestGrid(w, h, useImages, attempts: 50);
 
-            Cursor.Current = Cursors.Default;
+                // 5. Обробка результату
+                if (_currentGrid != null)
+                {
+                    UpdateImage();
+                }
+                else
+                {
+                    MessageBox.Show($"Не вдалося згенерувати сканворд розміром {w}x{h}. Спробуйте ще раз.");
+                }
+            }
+            finally
+            {
+                // 6. ОБОВ'ЯЗКОВО повертаємо звичайний курсор (навіть якщо сталась помилка)
+                Cursor.Current = Cursors.Default;
+            }
         }
 
         private void CheckBoxShowAnswers_CheckedChanged(object sender, EventArgs e)

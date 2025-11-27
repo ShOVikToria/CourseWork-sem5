@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
+using System.Windows.Forms;
 
 namespace ScanwordGenerator
 {
@@ -8,7 +10,7 @@ namespace ScanwordGenerator
     {
         private readonly Brush _brushText = Brushes.Black;
         private readonly Brush _brushGray = new SolidBrush(Color.FromArgb(220, 220, 220));
-        private readonly Brush _brushArrow = Brushes.Black; // Стрілки краще чорним або темно-сірим
+        private readonly Brush _brushArrow = Brushes.Black;
         private readonly Pen _penBorder = new Pen(Color.Gray, 1);
 
         public Bitmap DrawGrid(Cell[,] grid, int widthPx, int heightPx, bool showAnswers)
@@ -27,98 +29,181 @@ namespace ScanwordGenerator
             using (Graphics g = Graphics.FromImage(bmp))
             {
                 g.SmoothingMode = SmoothingMode.AntiAlias;
+                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
                 g.Clear(Color.White);
 
-                // ЗМІНА 2: Шрифт відповідей тонший (Regular) і трішки менший (0.5f замість 0.6f)
+                for (int y = 0; y < gridH; y++)
+                    for (int x = 0; x < gridW; x++)
+                        DrawCellBackground(g, grid[y, x], x, y, cellSize);
+
                 using (Font fontLetter = new Font("Arial", cellSize * 0.5f, FontStyle.Regular))
-                using (Font fontDef = new Font("Arial Narrow", cellSize * 0.18f, FontStyle.Regular))
+                using (Font fontDef = new Font("Arial Narrow", cellSize * 0.22f, FontStyle.Regular))
+                using (StringFormat sf = new StringFormat())
                 {
+                    sf.Alignment = StringAlignment.Center;
+                    sf.LineAlignment = StringAlignment.Near;
+                    sf.Trimming = StringTrimming.Character; // Змінив на Character, щоб бачити шлях
+
                     for (int y = 0; y < gridH; y++)
-                    {
                         for (int x = 0; x < gridW; x++)
-                        {
-                            DrawCell(g, grid[y, x], x, y, cellSize, fontLetter, fontDef, showAnswers);
-                        }
-                    }
+                            DrawCellContent(g, grid[y, x], x, y, cellSize, fontLetter, fontDef, showAnswers, sf);
                 }
             }
             return bmp;
         }
 
-        private void DrawCell(Graphics g, Cell cell, int x, int y, float size, Font fLetter, Font fDef, bool showAnswers)
+        private void DrawCellBackground(Graphics g, Cell cell, int x, int y, float size)
         {
             float px = x * size + 5;
             float py = y * size + 5;
             RectangleF rect = new RectangleF(px, py, size, size);
 
-            // 1. Фон
             if (cell.Type == CellType.Empty)
                 g.FillRectangle(_brushGray, rect);
             else
                 g.FillRectangle(Brushes.White, rect);
 
-            // 2. Рамка
             g.DrawRectangle(_penBorder, px, py, size, size);
+        }
 
-            // 3. Вміст
+        private void DrawCellContent(Graphics g, Cell cell, int x, int y, float size, Font fLetter, Font fDef, bool showAnswers, StringFormat sf)
+        {
+            float px = x * size + 5;
+            float py = y * size + 5;
+
             if (cell.Type == CellType.Letter && showAnswers)
             {
-                string letter = cell.Letter.ToString();
-                SizeF strSize = g.MeasureString(letter, fLetter);
-                // Центруємо літеру
-                g.DrawString(letter, fLetter, _brushText, px + (size - strSize.Width) / 2, py + (size - strSize.Height) / 2);
+                RectangleF rect = new RectangleF(px, py, size, size);
+                StringFormat sfLetter = new StringFormat(sf) { LineAlignment = StringAlignment.Center };
+                g.DrawString(cell.Letter.ToString(), fLetter, _brushText, rect, sfLetter);
             }
             else if (cell.Type == CellType.Definition)
             {
-                // Текст питання
-                RectangleF textRect = new RectangleF(px + 2, py + 2, size - 4, size - 4);
-                g.DrawString(cell.DefinitionText, fDef, _brushText, textRect);
+                float padding = 2;
+                RectangleF textRect = new RectangleF(px + padding, py + padding, size - (padding * 2), size - (padding * 2));
 
-                // ЗМІНА 1: Малюємо стрілку не тут, а в напрямку клітинки-відповіді
-                DrawArrowPointingToTarget(g, px, py, size, cell.ArrowDirection);
+                if (!string.IsNullOrEmpty(cell.DefinitionText) && cell.DefinitionText != "No question")
+                {
+                    float maxFontSize = size * 0.22f;
+                    float minFontSize = size * 0.12f;
+
+                    using (Font fd = FitTextToRectangle(g, cell.DefinitionText, "Arial Narrow", textRect, maxFontSize, minFontSize))
+                    {
+                        g.DrawString(cell.DefinitionText, fd, _brushText, textRect, sf);
+                    }
+                    DrawArrowPointingToTarget(g, px, py, size, cell.ArrowDirection);
+                }
             }
+            else if (cell.Type == CellType.Picture && cell.IsPictureMainCell)
+            {
+                float imgWidth = cell.ImageWidthCells * size;
+                float imgHeight = cell.ImageHeightCells * size;
+                RectangleF imgRect = new RectangleF(px, py, imgWidth, imgHeight);
+
+                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, cell.ImagePath);
+
+                // --- ЛОГІКА ВІДОБРАЖЕННЯ / ДІАГНОСТИКИ ---
+                if (File.Exists(fullPath))
+                {
+                    try
+                    {
+                        using (Image img = Image.FromFile(fullPath))
+                        {
+                            g.DrawImage(img, imgRect);
+                        }
+                    }
+                    catch
+                    {
+                        g.DrawString("Broken Img", fLetter, Brushes.Red, imgRect, sf);
+                    }
+                }
+                else
+                {
+                    // ДІАГНОСТИКА: Виводимо частину шляху, яку програма не знайшла
+                    // Це допоможе зрозуміти, чи шукає вона "animal_h/cat.jpg" чи щось інше
+
+                    // Відрізаємо початок шляху (D:\Projects...), залишаємо тільки кінець
+                    string relativePathDisplay = cell.ImagePath;
+
+                    using (Font errFont = new Font("Arial", size * 0.12f))
+                    {
+                        // Виводимо червоним кольором те, що програма шукала
+                        g.DrawString($"Not Found:\n{relativePathDisplay}", errFont, Brushes.Red, imgRect, sf);
+                    }
+                }
+
+                g.DrawRectangle(new Pen(Color.Gray, 2), px, py, imgWidth, imgHeight);
+                DrawArrowForPicture(g, px, py, size, cell.ArrowDirection, cell.ImageWidthCells, cell.ImageHeightCells);
+            }
+        }
+
+        private Font FitTextToRectangle(Graphics g, string text, string fontFamily, RectangleF rect, float maxSize, float minSize)
+        {
+            Font font = new Font(fontFamily, maxSize, FontStyle.Regular);
+            while (font.Size > minSize)
+            {
+                SizeF size = g.MeasureString(text, font, (int)rect.Width);
+                if (size.Height <= rect.Height && size.Width <= rect.Width) return font;
+
+                float newSize = font.Size - 0.5f;
+                font.Dispose();
+                font = new Font(fontFamily, newSize, FontStyle.Regular);
+            }
+            return font;
         }
 
         private void DrawArrowPointingToTarget(Graphics g, float defX, float defY, float size, string direction)
         {
-            float arrowLen = size * 0.2f; // Довжина стрілки
-
+            float arrowLen = size * 0.2f;
             PointF[] triangle;
 
-            if (direction == "->") // Вправо (малюємо в лівій частині НАСТУПНОЇ клітинки)
+            if (direction == "->")
             {
-                // Координати цільової клітинки (тієї, що справа)
                 float targetX = defX + size;
-                float targetY = defY;
-
-                // Малюємо стрілку на початку цільової клітинки (зліва по центру)
-                float ax = targetX + 2; // +2 пікселі відступу від лінії
-                float ay = targetY + size / 2;
-
-                triangle = new PointF[] {
-                    new PointF(ax + arrowLen, ay),                 // Носик (вправо)
-                    new PointF(ax, ay - arrowLen / 1.5f),          // Верх
-                    new PointF(ax, ay + arrowLen / 1.5f)           // Низ
-                };
+                float targetY = defY + size / 2;
+                triangle = new PointF[] { new PointF(targetX + arrowLen, targetY), new PointF(targetX, targetY - arrowLen / 1.5f), new PointF(targetX, targetY + arrowLen / 1.5f) };
             }
-            else // "v" - Вниз (малюємо у верхній частині НИЖНЬОЇ клітинки)
+            else
             {
-                // Координати цільової клітинки (тієї, що знизу)
-                float targetX = defX;
+                float targetX = defX + size / 2;
                 float targetY = defY + size;
+                triangle = new PointF[] { new PointF(targetX, targetY + arrowLen), new PointF(targetX - arrowLen / 1.5f, targetY), new PointF(targetX + arrowLen / 1.5f, targetY) };
+            }
+            g.FillPolygon(_brushArrow, triangle);
+        }
 
-                // Малюємо стрілку зверху цільової клітинки (по центру)
-                float ax = targetX + size / 2;
-                float ay = targetY + 2; // +2 пікселі відступу від лінії
+        private void DrawArrowForPicture(Graphics g, float imgX, float imgY, float cellSize, string direction, int wCells, int hCells)
+        {
+            float arrowLen = cellSize * 0.3f;
+            PointF[] triangle;
+
+            // Розрахунок позиції стрілки
+            int cellRowIndex = (hCells - 1) / 2;
+            int cellColIndex = (wCells - 1) / 2;
+
+            if (direction == "->")
+            {
+                float rightEdgeX = imgX + (wCells * cellSize);
+                float targetCenterY = imgY + (cellRowIndex * cellSize) + (cellSize / 2);
 
                 triangle = new PointF[] {
-                    new PointF(ax, ay + arrowLen),                 // Носик (вниз)
-                    new PointF(ax - arrowLen / 1.5f, ay),          // Ліво
-                    new PointF(ax + arrowLen / 1.5f, ay)           // Право
+                    new PointF(rightEdgeX + arrowLen, targetCenterY),
+                    new PointF(rightEdgeX, targetCenterY - arrowLen / 1.5f),
+                    new PointF(rightEdgeX, targetCenterY + arrowLen / 1.5f)
                 };
             }
+            else // "v"
+            {
+                float bottomEdgeY = imgY + (hCells * cellSize);
+                float targetCenterX = imgX + (cellColIndex * cellSize) + (cellSize / 2);
 
-            g.FillPolygon(_brushArrow, triangle);
+                triangle = new PointF[] {
+                    new PointF(targetCenterX, bottomEdgeY + arrowLen),
+                    new PointF(targetCenterX - arrowLen / 1.5f, bottomEdgeY),
+                    new PointF(targetCenterX + arrowLen / 1.5f, bottomEdgeY)
+                };
+            }
+            g.FillPolygon(Brushes.Black, triangle);
         }
     }
 }

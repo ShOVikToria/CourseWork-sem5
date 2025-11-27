@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\scanwordalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:scanwordalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\scanwordrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:scanwordrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\scanwordalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:scanwordalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\worddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:worddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\mainscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:mainscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\scanwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:scanwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\worddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:worddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,54 +50,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ScanwordService.cs",
-              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordService.cs",
-              "RelativeDocumentMoniker": "ScanwordService.cs",
-              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordService.cs",
-              "RelativeToolTip": "ScanwordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T22:50:10.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ScanwordAlgorithm.cs",
-              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordAlgorithm.cs",
-              "RelativeDocumentMoniker": "ScanwordAlgorithm.cs",
-              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordAlgorithm.cs",
-              "RelativeToolTip": "ScanwordAlgorithm.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAhwPEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T22:48:55.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WordData.cs",
-              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\WordData.cs",
-              "RelativeDocumentMoniker": "WordData.cs",
-              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\WordData.cs",
-              "RelativeToolTip": "WordData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T22:46:49.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Cell.cs",
               "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\Cell.cs",
               "RelativeDocumentMoniker": "Cell.cs",
               "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\Cell.cs",
               "RelativeToolTip": "Cell.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T22:46:19.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainScreen.cs",
+              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.cs",
+              "RelativeDocumentMoniker": "MainScreen.cs",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.cs",
+              "RelativeToolTip": "MainScreen.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T22:07:36.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScanwordAlgorithm.cs",
+              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordAlgorithm.cs",
+              "RelativeDocumentMoniker": "ScanwordAlgorithm.cs",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordAlgorithm.cs",
+              "RelativeToolTip": "ScanwordAlgorithm.cs",
+              "ViewState": "AgIAAIYBAAAAAAAAAAAowKcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T22:48:55.444Z",
               "EditorCaption": ""
             },
             {
@@ -100,22 +95,60 @@
               "RelativeDocumentMoniker": "ScanwordRenderer.cs",
               "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordRenderer.cs",
               "RelativeToolTip": "ScanwordRenderer.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAwwHsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAowNAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T22:34:57.802Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainScreen.cs",
+              "DocumentIndex": 4,
+              "Title": "MainScreen.Designer.cs",
+              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.Designer.cs",
+              "RelativeDocumentMoniker": "MainScreen.Designer.cs",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.Designer.cs",
+              "RelativeToolTip": "MainScreen.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T20:48:08.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainScreen.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.cs",
               "RelativeDocumentMoniker": "MainScreen.cs",
-              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.cs",
-              "RelativeToolTip": "MainScreen.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAwwHkAAABBAAAAAAAAAA==",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\MainScreen.cs [Design]",
+              "RelativeToolTip": "MainScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T22:07:36.664Z",
+              "WhenOpened": "2025-11-27T20:48:04.25Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ScanwordService.cs",
+              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordService.cs",
+              "RelativeDocumentMoniker": "ScanwordService.cs",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordService.cs",
+              "RelativeToolTip": "ScanwordService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T22:50:10.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WordData.cs",
+              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\WordData.cs",
+              "RelativeDocumentMoniker": "WordData.cs",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\WordData.cs",
+              "RelativeToolTip": "WordData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T22:46:49.574Z",
               "EditorCaption": ""
             }
           ]

@@ -11,9 +11,9 @@
       "Природний ворог мишей"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "cat_s.jpg",
+      "horizontal": "cat_h.jpg",
+      "vertical": "cat_v.jpg"
     },
     "usage_count": 0
   },
@@ -29,9 +29,9 @@
       "Африканський хижак з прайду"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "lion_s.jpg",
+      "horizontal": "lion_h.jpg",
+      "vertical": "lion_v.jpg"
     },
     "usage_count": 0
   },
@@ -65,9 +65,9 @@
       "Тварина, що боїться мишей (за легендою)"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "elephant_s.jpg",
+      "horizontal": "elephant_h.jpg",
+      "vertical": "elephant_v.jpg"
     },
     "usage_count": 0
   },
@@ -4223,9 +4223,9 @@
       "Лісовий велетень"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "elk_s.jpg",
+      "horizontal": "elk_h.jpg",
+      "vertical": "elk_v.jpg"
     },
     "usage_count": 0
   },
@@ -5753,9 +5753,9 @@
       "Герой роману Донни Тартт"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "goldfinch_s.jpg",
+      "horizontal": "goldfinch_h.jpg",
+      "vertical": "goldfinch_v.jpg"
     },
     "usage_count": 0
   },
@@ -5825,9 +5825,9 @@
       "Перед дощем кричить як кішка"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "oriole_s.jpg",
+      "horizontal": "oriole_h.jpg",
+      "vertical": "oriole_v.jpg"
     },
     "usage_count": 0
   },
@@ -9695,9 +9695,9 @@
       "Зірка селфі з Австралії"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "quokka_s.jpg",
+      "horizontal": "quokka_h.jpg",
+      "vertical": "quokka_v.jpg"
     },
     "usage_count": 0
   },

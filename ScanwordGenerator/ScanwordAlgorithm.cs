@@ -4,13 +4,22 @@ using System.Linq;
 
 namespace ScanwordGenerator
 {
-    public class ScanwordAlgorithm // <--- ЗМІНЕНО ІМ'Я КЛАСУ
+    public class ScanwordAlgorithm
     {
         private int _width;
         private int _height;
         public Cell[,] Grid { get; private set; }
         private Random _rng = new Random();
         private Dictionary<char, List<WordData>> _wordIndex;
+
+        // Лічильник встановлених картинок
+        public int PlacedImagesCount { get; private set; }
+
+        // Цільова кількість картинок
+        private int _targetImageCount;
+
+        // Діагностика
+        public bool DictionaryHasImages { get; private set; }
 
         public ScanwordAlgorithm(int width, int height)
         {
@@ -27,44 +36,132 @@ namespace ScanwordGenerator
                     Grid[y, x] = new Cell();
         }
 
-        // --- Основні методи генерації (з вашого старого коду) ---
+        private void BuildIndex(List<WordData> allWords)
+        {
+            _wordIndex = new Dictionary<char, List<WordData>>();
+            foreach (var word in allWords)
+            {
+                if (word.Images != null && word.Images.HasAny) DictionaryHasImages = true;
 
-        public int Generate(List<WordData> allWords)
+                foreach (char c in word.Term.Distinct())
+                {
+                    if (!_wordIndex.ContainsKey(c)) _wordIndex[c] = new List<WordData>();
+                    _wordIndex[c].Add(word);
+                }
+            }
+        }
+
+        // --- ГОЛОВНИЙ МЕТОД ГЕНЕРАЦІЇ ---
+        public int Generate(List<WordData> allWords, bool useImages)
         {
             if (_wordIndex == null) BuildIndex(allWords);
             InitializeGrid();
+            PlacedImagesCount = 0;
+
+            // Визначення цільової кількості картинок
+            if (useImages)
+            {
+                int maxDim = Math.Max(_width, _height);
+                if (maxDim <= 15) _targetImageCount = _rng.Next(1, 3);      // 1-2
+                else if (maxDim <= 25) _targetImageCount = _rng.Next(3, 5); // 3-4
+                else _targetImageCount = _rng.Next(5, 9);                   // 5-8
+            }
+            else
+            {
+                _targetImageCount = 0;
+            }
 
             var usedWords = new HashSet<string>();
 
-            // Скелет: Перше слово
-            var startWords = allWords.Where(w => w.Term.Length >= 6).ToList();
-            if (startWords.Count == 0) startWords = allWords;
-            if (startWords.Count == 0) return 0;
+            WordData firstWord = null;
+            string firstImagePath = null;
+            int defW = 1, defH = 1;
 
-            var firstWord = startWords[_rng.Next(startWords.Count)];
-            int totalLen = firstWord.Term.Length + 1;
-            int startX = Math.Max(0, (_width - totalLen) / 2);
-            int startY = _height / 2;
+            // Випадковий напрямок для першого слова
+            bool firstIsHor = _rng.Next(2) == 0;
 
-            PlaceWord(firstWord, startX, startY, true);
+            // 1. ВИБІР ПЕРШОГО СЛОВА
+            if (useImages)
+            {
+                var imageWords = allWords.Where(w => w.Images != null && w.Images.HasAny && w.Term.Length >= 3).ToList();
+
+                if (imageWords.Any())
+                {
+                    firstWord = imageWords[_rng.Next(imageWords.Count)];
+
+                    // FIX: Отримуємо формати з правильними назвами папок
+                    var validFormats = GetValidImageFormats(firstWord);
+                    if (validFormats.Count > 0)
+                    {
+                        var chosen = validFormats[_rng.Next(validFormats.Count)];
+                        firstImagePath = chosen.path;
+                        defW = chosen.w;
+                        defH = chosen.h;
+                    }
+                }
+            }
+
+            // Fallback
+            if (firstWord == null)
+            {
+                var startWords = allWords.Where(w => w.Term.Length >= 5).ToList();
+                if (startWords.Count == 0) startWords = allWords;
+                if (startWords.Count == 0) return 0;
+
+                firstWord = startWords[_rng.Next(startWords.Count)];
+            }
+
+            // 2. РОЗРАХУНОК ПОЗИЦІЇ
+            int startX, startY, defX, defY;
+
+            if (firstIsHor)
+            {
+                int requiredWidth = firstWord.Term.Length + defW;
+                startX = Math.Max(defW, (_width - requiredWidth) / 2);
+                startY = _height / 2;
+
+                defX = startX - defW;
+                defY = startY - (defH - 1) / 2;
+            }
+            else
+            {
+                int requiredHeight = firstWord.Term.Length + defH;
+                startX = _width / 2;
+                startY = Math.Max(defH, (_height - requiredHeight) / 2);
+
+                defY = startY - defH;
+                defX = startX - (defW - 1) / 2;
+            }
+
+            if (defX < 0) defX = 0;
+            if (defX + defW > _width) defX = _width - defW;
+            if (defY < 0) defY = 0;
+            if (defY + defH > _height) defY = _height - defH;
+
+            // 3. РОЗМІЩЕННЯ
+            PlaceWord(firstWord, startX, startY, firstIsHor, defW, defH, firstImagePath, firstWord.GetRandomQuestion(), defX, defY);
             usedWords.Add(firstWord.Term);
+
+            if (firstImagePath != null) PlacedImagesCount++;
 
             int placedCount = 1;
             var activeAnchors = new List<(int x, int y)>();
-            AddAnchorsFromWord(firstWord, startX, startY, true, activeAnchors);
+            AddAnchorsFromWord(firstWord, startX, startY, firstIsHor, activeAnchors);
 
+            // 4. ЦИКЛ ГЕНЕРАЦІЇ
             bool stuck = false;
             while (!stuck)
             {
                 stuck = true;
                 int anchorsToCheck = activeAnchors.Count;
+
                 for (int k = 0; k < anchorsToCheck; k++)
                 {
                     if (activeAnchors.Count == 0) break;
                     int idx = _rng.Next(activeAnchors.Count);
                     var anchor = activeAnchors[idx];
 
-                    if (TryAttachBestWordToAnchor(anchor.x, anchor.y, usedWords, activeAnchors))
+                    if (TryAttachBestWordToAnchor(anchor.x, anchor.y, usedWords, activeAnchors, useImages))
                     {
                         placedCount++;
                         stuck = false;
@@ -74,32 +171,25 @@ namespace ScanwordGenerator
             return placedCount;
         }
 
-        // --- Допоміжні методи ---
-
-        private void BuildIndex(List<WordData> allWords)
+        // --- ВИПРАВЛЕНО НАЗВИ ПАПОК ТУТ ---
+        private List<(string path, int w, int h)> GetValidImageFormats(WordData word)
         {
-            _wordIndex = new Dictionary<char, List<WordData>>();
-            foreach (var word in allWords)
-            {
-                foreach (char c in word.Term.Distinct())
-                {
-                    if (!_wordIndex.ContainsKey(c)) _wordIndex[c] = new List<WordData>();
-                    _wordIndex[c].Add(word);
-                }
-            }
+            var list = new List<(string, int, int)>();
+
+            // Всі папки тепер 'animals_'
+            if (!string.IsNullOrEmpty(word.Images.Square))
+                list.Add(("animals_s/" + word.Images.Square, 2, 2));
+
+            if (!string.IsNullOrEmpty(word.Images.Horizontal))
+                list.Add(("animals_h/" + word.Images.Horizontal, 3, 2)); // Було animal_h
+
+            if (!string.IsNullOrEmpty(word.Images.Vertical))
+                list.Add(("animals_v/" + word.Images.Vertical, 2, 3));   // Було animal_v
+
+            return list;
         }
 
-        private void AddAnchorsFromWord(WordData word, int startX, int startY, bool isHor, List<(int x, int y)> anchors)
-        {
-            for (int i = 0; i < word.Term.Length; i++)
-            {
-                int x = isHor ? startX + 1 + i : startX;
-                int y = isHor ? startY : startY + 1 + i;
-                anchors.Add((x, y));
-            }
-        }
-
-        private bool TryAttachBestWordToAnchor(int x, int y, HashSet<string> usedWords, List<(int x, int y)> anchors)
+        private bool TryAttachBestWordToAnchor(int x, int y, HashSet<string> usedWords, List<(int x, int y)> anchors, bool useImages)
         {
             char anchorChar = Grid[y, x].Letter;
             if (_wordIndex == null || !_wordIndex.ContainsKey(anchorChar)) return false;
@@ -108,41 +198,100 @@ namespace ScanwordGenerator
             bool anchorIsHor = CheckIfCellIsPartHor(x, y);
             bool tryHor = !anchorIsHor;
 
-            var validMoves = new List<(WordData word, int startX, int startY, int score)>();
-            int sampleSize = 50;
-            int count = 0;
+            bool prioritizeImage = useImages && PlacedImagesCount < _targetImageCount;
+
             int startIdx = _rng.Next(candidates.Count);
 
             for (int k = 0; k < candidates.Count; k++)
             {
-                if (count >= sampleSize) break;
                 var word = candidates[(startIdx + k) % candidates.Count];
                 if (usedWords.Contains(word.Term)) continue;
+                if (word.Questions == null || !word.Questions.Any()) continue;
 
                 for (int i = 0; i < word.Term.Length; i++)
                 {
                     if (word.Term[i] == anchorChar)
                     {
-                        int startX = tryHor ? x - (i + 1) : x;
-                        int startY = tryHor ? y : y - (i + 1);
-
-                        if (CanPlaceSafe(word.Term, startX, startY, tryHor, out int intersections))
+                        // 1. СПРОБА КАРТИНКИ
+                        if (prioritizeImage && word.Images != null && word.Images.HasAny)
                         {
-                            int score = (word.Term.Length * 2) + (intersections * 10);
-                            validMoves.Add((word, startX, startY, score));
+                            var formats = GetValidImageFormats(word);
+                            formats = formats.OrderBy(a => _rng.Next()).ToList();
+
+                            bool fit = false;
+                            foreach (var fmt in formats)
+                            {
+                                if (TryFitShape(word, x, y, i, tryHor, fmt.w, fmt.h, fmt.path, usedWords, anchors))
+                                {
+                                    fit = true;
+                                    break;
+                                }
+                            }
+
+                            if (fit) return true;
+                            continue;
+                        }
+
+                        // 2. СПРОБА ТЕКСТУ
+                        if (!prioritizeImage || (word.Images == null || !word.Images.HasAny))
+                        {
+                            if (TryFitShape(word, x, y, i, tryHor, 1, 1, null, usedWords, anchors)) return true;
                         }
                     }
                 }
-                count++;
+            }
+            return false;
+        }
+
+        private bool TryFitShape(WordData word, int anchorX, int anchorY, int charIndex, bool isHor,
+                                 int defW, int defH, string imagePath,
+                                 HashSet<string> usedWords, List<(int x, int y)> anchors)
+        {
+            int wordStartX, wordStartY;
+            int defStartX, defStartY;
+
+            if (isHor)
+            {
+                wordStartX = anchorX - charIndex;
+                wordStartY = anchorY;
+                defStartX = wordStartX - defW;
+                defStartY = wordStartY - (defH - 1) / 2;
+
+                if (defStartX < 0) return false;
+                if (defStartY < 0) defStartY = 0;
+                if (defStartY + defH > _height) defStartY = _height - defH;
+            }
+            else
+            {
+                wordStartX = anchorX;
+                wordStartY = anchorY - charIndex;
+                defStartY = wordStartY - defH;
+                defStartX = wordStartX - (defW - 1) / 2;
+
+                if (defStartY < 0) return false;
+                if (defStartX < 0) defStartX = 0;
+                if (defStartX + defW > _width) defStartX = _width - defW;
             }
 
-            if (validMoves.Count == 0) return false;
+            if (!CanPlaceWordLetters(word.Term, wordStartX, wordStartY, isHor, out int intersections)) return false;
+            if (!IsAreaFree(defStartX, defStartY, defW, defH)) return false;
 
-            var bestMove = validMoves.OrderByDescending(m => m.score).ThenBy(m => _rng.Next()).First();
-            PlaceWord(bestMove.word, bestMove.startX, bestMove.startY, tryHor);
-            usedWords.Add(bestMove.word.Term);
-            AddAnchorsFromWord(bestMove.word, bestMove.startX, bestMove.startY, tryHor, anchors);
+            PlaceWord(word, wordStartX, wordStartY, isHor, defW, defH, imagePath, word.GetRandomQuestion(), defStartX, defStartY);
+
+            usedWords.Add(word.Term);
+            if (imagePath != null) PlacedImagesCount++;
+            AddAnchorsFromWord(word, wordStartX, wordStartY, isHor, anchors);
             return true;
+        }
+
+        private void AddAnchorsFromWord(WordData word, int startX, int startY, bool isHor, List<(int x, int y)> anchors)
+        {
+            for (int i = 0; i < word.Term.Length; i++)
+            {
+                int x = isHor ? startX + i : startX;
+                int y = isHor ? startY : startY + i;
+                if (!anchors.Contains((x, y))) anchors.Add((x, y));
+            }
         }
 
         private bool CheckIfCellIsPartHor(int x, int y)
@@ -152,40 +301,40 @@ namespace ScanwordGenerator
             return false;
         }
 
-        private bool CanPlaceSafe(string term, int startX, int startY, bool isHor, out int intersections)
+        private bool IsAreaFree(int startX, int startY, int w, int h)
+        {
+            if (startX < 0 || startY < 0 || startX + w > _width || startY + h > _height) return false;
+            for (int y = 0; y < h; y++)
+                for (int x = 0; x < w; x++)
+                    if (Grid[startY + y, startX + x].Type != CellType.Empty) return false;
+            return true;
+        }
+
+        private bool CanPlaceWordLetters(string term, int startX, int startY, bool isHor, out int intersections)
         {
             intersections = 0;
-            int totalLen = term.Length + 1;
             if (startX < 0 || startY < 0) return false;
-            if (isHor && startX + totalLen > _width) return false;
-            if (!isHor && startY + totalLen > _height) return false;
+            if (isHor && startX + term.Length > _width) return false;
+            if (!isHor && startY + term.Length > _height) return false;
 
-            if (isHor) { if (startX + totalLen < _width && Grid[startY, startX + totalLen].Type == CellType.Letter) return false; }
-            else { if (startY + totalLen < _height && Grid[startY + totalLen, startX].Type == CellType.Letter) return false; }
+            if (isHor) { if (startX + term.Length < _width && Grid[startY, startX + term.Length].Type == CellType.Letter) return false; }
+            else { if (startY + term.Length < _height && Grid[startY + term.Length, startX].Type == CellType.Letter) return false; }
 
-            for (int k = 0; k < totalLen; k++)
+            for (int k = 0; k < term.Length; k++)
             {
                 int cx = isHor ? startX + k : startX;
                 int cy = isHor ? startY : startY + k;
                 var cell = Grid[cy, cx];
 
-                if (k == 0) // Питання
+                if (cell.Type != CellType.Empty)
                 {
-                    if (cell.Type != CellType.Empty) return false;
+                    if (cell.Type != CellType.Letter) return false;
+                    if (cell.Letter != term[k]) return false;
+                    intersections++;
                 }
-                else // Літера
+                else
                 {
-                    char charToPlace = term[k - 1];
-                    if (cell.Type != CellType.Empty)
-                    {
-                        if (cell.Type != CellType.Letter) return false;
-                        if (cell.Letter != charToPlace) return false;
-                        intersections++;
-                    }
-                    else
-                    {
-                        if (HasSideConflict(cx, cy, isHor)) return false;
-                    }
+                    if (HasSideConflict(cx, cy, isHor)) return false;
                 }
             }
             return true;
@@ -206,17 +355,36 @@ namespace ScanwordGenerator
             return false;
         }
 
-        private void PlaceWord(WordData word, int startX, int startY, bool isHor)
+        private void PlaceWord(WordData word, int wordX, int wordY, bool isHor, int defW, int defH, string imagePath, string question, int defX, int defY)
         {
-            var defCell = Grid[startY, startX];
-            defCell.Type = CellType.Definition;
-            defCell.DefinitionText = word.GetRandomQuestion();
-            defCell.ArrowDirection = isHor ? "->" : "v";
+            for (int dy = 0; dy < defH; dy++)
+            {
+                for (int dx = 0; dx < defW; dx++)
+                {
+                    var cell = Grid[defY + dy, defX + dx];
+                    if (imagePath != null)
+                    {
+                        cell.Type = CellType.Picture;
+                        cell.ImagePath = imagePath;
+                        cell.ImageWidthCells = defW;
+                        cell.ImageHeightCells = defH;
+                        cell.IsPictureMainCell = (dx == 0 && dy == 0);
+                    }
+                    else
+                    {
+                        cell.Type = CellType.Definition;
+                        cell.DefinitionText = question;
+                    }
+
+                    if (isHor) cell.ArrowDirection = "->";
+                    else cell.ArrowDirection = "v";
+                }
+            }
 
             for (int i = 0; i < word.Term.Length; i++)
             {
-                int lx = isHor ? startX + 1 + i : startX;
-                int ly = isHor ? startY : startY + 1 + i;
+                int lx = isHor ? wordX + i : wordX;
+                int ly = isHor ? wordY : wordY + i;
                 Grid[ly, lx].Type = CellType.Letter;
                 Grid[ly, lx].Letter = word.Term[i];
             }
@@ -232,8 +400,22 @@ namespace ScanwordGenerator
         public Cell[,] GetGridClone()
         {
             Cell[,] clone = new Cell[_height, _width];
-            for (int y = 0; y < _height; y++) for (int x = 0; x < _width; x++)
-                    clone[y, x] = new Cell { Type = Grid[y, x].Type, Letter = Grid[y, x].Letter, DefinitionText = Grid[y, x].DefinitionText, ArrowDirection = Grid[y, x].ArrowDirection };
+            for (int y = 0; y < _height; y++)
+                for (int x = 0; x < _width; x++)
+                {
+                    var src = Grid[y, x];
+                    clone[y, x] = new Cell
+                    {
+                        Type = src.Type,
+                        Letter = src.Letter,
+                        DefinitionText = src.DefinitionText,
+                        ArrowDirection = src.ArrowDirection,
+                        ImagePath = src.ImagePath,
+                        ImageWidthCells = src.ImageWidthCells,
+                        ImageHeightCells = src.ImageHeightCells,
+                        IsPictureMainCell = src.IsPictureMainCell
+                    };
+                }
             return clone;
         }
 

@@ -25,21 +25,21 @@ namespace ScanwordGenerator
             }
         }
 
-        public Cell[,] GenerateBestGrid(int width, int height, int attempts = 50)
+        // У методі GenerateBestGrid додайте параметр:
+        public Cell[,] GenerateBestGrid(int width, int height, bool useImages, int attempts = 50)
         {
             if (!IsDictionaryLoaded) return null;
 
             var validWords = _allWords.Where(w => w.Term.Length < width && w.Term.Length < height).ToList();
 
-            // ТУТ МИ ВИКОРИСТОВУЄМО НОВИЙ КЛАС ScanwordAlgorithm
             var generator = new ScanwordAlgorithm(width, height);
-
             double bestScore = -1;
             Cell[,] bestGrid = null;
 
             for (int i = 0; i < attempts; i++)
             {
-                generator.Generate(validWords);
+                // ПЕРЕДАЄМО useImages СЮДИ
+                generator.Generate(validWords, useImages);
                 double score = generator.CalculateFillPercentage();
 
                 if (score > bestScore)
