@@ -11,9 +11,9 @@
       "The natural enemy of mice"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "cat_s.jpg",
+      "horizontal": "cat_h.jpg",
+      "vertical": "cat_v.jpg"
     },
     "usage_count": 0
   },
@@ -29,9 +29,9 @@
       "African predator from a pride"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "lion_s.jpg",
+      "horizontal": "lion_h.jpg",
+      "vertical": "lion_v.jpg"
     },
     "usage_count": 0
   },
@@ -65,9 +65,9 @@
       "Afraid of mice (according to legend)"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "elephant_s.jpg",
+      "horizontal": "elephant_h.jpg",
+      "vertical": "elephant_v.jpg"
     },
     "usage_count": 0
   },
