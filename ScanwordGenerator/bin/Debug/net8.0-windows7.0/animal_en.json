@@ -5398,5 +5398,4405 @@
       "vertical": null
     },
     "usage_count": 0
-  }
+  },
+  {
+    "id": "animal_en_301",
+    "term": "DACHSHUND",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "A dog with a long body and short legs",
+      "Badger dog",
+      "Often called a sausage dog"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_302",
+    "term": "PUG",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Small dog with a wrinkled face",
+      "Has a curled tail",
+      "Frank from \"Men in Black\""
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_303",
+    "term": "POODLE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Curly-haired dog",
+      "Often groomed in fancy styles",
+      "Very intelligent breed from France/Germany"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_304",
+    "term": "MASTIFF",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "A very large and powerful dog",
+      "Used as a guard dog",
+      "Known for its drooping jowls"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_305",
+    "term": "COLLIE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Scottish herding dog",
+      "Breed of the famous Lassie",
+      "Has long beautiful fur"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_306",
+    "term": "BOXER",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Muscular dog with a square jaw",
+      "Energetic and playful breed",
+      "Namesake of a fighter"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_307",
+    "term": "HUSKY",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Sled dog from the north",
+      "Often has blue eyes",
+      "Resembles a wolf"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_308",
+    "term": "BEAGLE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small hound with long ears",
+      "Used for hunting hare",
+      "Snoopy's breed"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_309",
+    "term": "SHEPHERD",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Herding dog",
+      "German ... (police dog)",
+      "Protects the flock"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_310",
+    "term": "DALMATIAN",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Spotted dog",
+      "Star of \"101 ...\"",
+      "Fire station mascot"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_311",
+    "term": "PERSIAN",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Very fluffy cat",
+      "Cat with a flat face",
+      "Breed from Iran"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_312",
+    "term": "SIAMESE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Cat with blue eyes and dark points",
+      "Very vocal cat breed",
+      "Originated in Thailand"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_313",
+    "term": "BENGAL",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Domestic cat that looks like a leopard",
+      "Has a spotted coat",
+      "Energetic cat breed"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_314",
+    "term": "SPHYNX",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Hairless cat breed",
+      "Named after an Egyptian statue",
+      "Needs warmth"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_315",
+    "term": "RAGDOLL",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Large affectionate cat",
+      "Goes limp when picked up",
+      "Blue-eyed fluffy cat"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_316",
+    "term": "FINCH",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small seed-eating bird",
+      "Darwin studied them",
+      "Colorful songbird"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_317",
+    "term": "THRUSH",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Singing forest bird",
+      "Often has a spotted breast",
+      "Song..."
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_318",
+    "term": "WREN",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Tiny brown bird",
+      "Has a tail that sticks up",
+      "Loud voice for a small bird"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_319",
+    "term": "LARK",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird known for morning song",
+      "Rises early",
+      "Meadow bird"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_320",
+    "term": "SWIFT",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird that looks like a swallow",
+      "Spends most of its life flying",
+      "Very fast bird"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_321",
+    "term": "ROOK",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Black bird, similar to a crow",
+      "Nests in colonies",
+      "Also a chess piece"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_322",
+    "term": "JACKDAW",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small black bird with a grey neck",
+      "Relative of the crow",
+      "Often lives in chimneys"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_323",
+    "term": "ORIOLE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Bright yellow and black bird",
+      "Builds hanging nests",
+      "Baltimore ... (baseball team)"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_324",
+    "term": "CORMORANT",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Black sea bird that dives for fish",
+      "Dries its wings spread out",
+      "Used for fishing in Asia"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_325",
+    "term": "MALLARD",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Common wild duck",
+      "Male has a green head",
+      "Ancestor of domestic ducks"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_326",
+    "term": "PETREL",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Sea bird that flies over storms",
+      "Storm ...",
+      "Walks on water (meaning of name)"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_327",
+    "term": "OSPREY",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird of prey that catches fish",
+      "River hawk",
+      "Dives into water feet first"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_328",
+    "term": "CONDOR",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Huge vulture from the Andes",
+      "One of the largest flying birds",
+      "Scavenger of the mountains"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_329",
+    "term": "PEREGRINE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fastest animal on the planet",
+      "A type of falcon",
+      "Dives at high speed"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_330",
+    "term": "STURGEON",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Ancient fish with bony plates",
+      "Source of black caviar",
+      "Long-lived river fish"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_331",
+    "term": "HAKE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Commercial sea fish",
+      "White fish often fried",
+      "Relative of the cod"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_332",
+    "term": "POLLOCK",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fish used to make imitation crab",
+      "Common food fish",
+      "Relative of the cod"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_333",
+    "term": "HALIBUT",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Large flatfish",
+      "Lives on the ocean floor",
+      "Prized for white meat"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_334",
+    "term": "SARDINE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Small oily fish",
+      "Often sold in tins",
+      "Packed like ...s"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_335",
+    "term": "SPRAT",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Tiny sea fish",
+      "Smaller than a herring",
+      "Often smoked or canned"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_336",
+    "term": "ANCHOVY",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small salty fish",
+      "Pizza topping",
+      "Used in Caesar salad dressing"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_337",
+    "term": "BREAM",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Deep-bodied freshwater fish",
+      "Sea ... or freshwater ...",
+      "Common catch for anglers"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_338",
+    "term": "CHUB",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Thick-bodied river fish",
+      "Freshwater fish of carp family",
+      "Eats insects"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_339",
+    "term": "TETRA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small aquarium fish",
+      "Neon ... (glowing stripe)",
+      "Schooling freshwater fish"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_340",
+    "term": "BARB",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Active aquarium fish",
+      "Tiger ... (striped)",
+      "Can nip fins"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_341",
+    "term": "BETTA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Siamese fighting fish",
+      "Fish with flowing fins",
+      "Males fight each other"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_342",
+    "term": "BEDBUG",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Parasite that lives in mattresses",
+      "Bites at night",
+      "Small flat insect"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_343",
+    "term": "GLOWWORM",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Insect larva that emits light",
+      "Bioluminescent creature",
+      "Shines in the dark"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_344",
+    "term": "SILKWORM",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Larva that makes silk",
+      "Eats mulberry leaves",
+      "Spins a cocoon"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_345",
+    "term": "CARNIVORE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Meat eater",
+      "Animal that hunts prey",
+      "Wolf or lion by diet type"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_346",
+    "term": "HERBIVORE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Plant eater",
+      "Cow or rabbit by diet type",
+      "Does not eat meat"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_347",
+    "term": "RODENT",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Animal with growing front teeth",
+      "Mouse, rat, or beaver",
+      "Animal that gnaws"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_348",
+    "term": "PACK",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Group of wolves",
+      "Group of dogs",
+      "A ... of cards or wolves"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_349",
+    "term": "HERD",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Group of cows or elephants",
+      "Group of grazing animals",
+      "Follows the leader"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_350",
+    "term": "FLOCK",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Group of sheep or birds",
+      "A ... of seagulls",
+      "Congregation of animals"
+    ],
+    "images": {
+      "square": null,
+      "horizontal": null,
+      "vertical": null
+    },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_351",
+    "term": "GUPPY",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Small colorful fish",
+      "Popular aquarium pet",
+      "Breeds easily"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_352",
+    "term": "SWORDTAIL",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Aquarium fish with long tail",
+      "Relative of the platy",
+      "Male has a \"sword\""
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_353",
+    "term": "NEON",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Glowing aquarium fish",
+      "Small schooling fish",
+      "... tetra"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_354",
+    "term": "DISCUS",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Round flat aquarium fish",
+      "Colorful Amazon native",
+      "King of aquarium"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_355",
+    "term": "GOLDFISH",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Carp relative in a bowl",
+      "Can be golden or black",
+      "Three wishes grantor"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_356",
+    "term": "GOURAMI",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Labyrinth fish",
+      "Has feeler threads",
+      "Builds bubble nests"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_357",
+    "term": "LOACH",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bottom dwelling fish",
+      "Weather fish",
+      "Looks like a worm"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_358",
+    "term": "STINKBUG",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Insect with bad smell",
+      "Shield shape",
+      "Garden pest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_359",
+    "term": "STRIDER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Walks on water surface",
+      "Long-legged bug",
+      "Water ..."
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_360",
+    "term": "FIREFLY",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Glows in the dark",
+      "Beetle with a light",
+      "Lightning bug"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_361",
+    "term": "CATERPILLAR",
+    "length": 11,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Butterfly larva",
+      "Eats leaves",
+      "Becomes a chrysalis"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_362",
+    "term": "SWALLOWTAIL",
+    "length": 11,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Butterfly with tail-like wings",
+      "Large colorful butterfly",
+      "Papilio"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_363",
+    "term": "ADMIRAL",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Butterfly with red bands",
+      "Red ... (butterfly)",
+      "Migratory insect"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_364",
+    "term": "GRUB",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Beetle larva",
+      "Thick white worm",
+      "Lives in soil"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_365",
+    "term": "PREDATOR",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Hunts other animals",
+      "Lion or wolf",
+      "Meat eater"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_366",
+    "term": "PREY",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Hunted by others",
+      "Rabbit or mouse",
+      "Food for predators"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_367",
+    "term": "SCAVENGER",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Eats dead animals",
+      "Vulture or hyena",
+      "Nature's cleaner"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_368",
+    "term": "OMNIVORE",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Eats plants and meat",
+      "Bear or human",
+      "Diverse diet"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_369",
+    "term": "FAUNA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Animal life of a region",
+      "Companion to flora",
+      "All animals"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_370",
+    "term": "FLORA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Plant life",
+      "Companion to fauna",
+      "Flowers and trees"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_371",
+    "term": "PRIDE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Group of lions",
+      "Family of big cats",
+      "Simba's family"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_372",
+    "term": "SWARM",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Group of bees",
+      "Large group of insects",
+      "Flying crowd"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_373",
+    "term": "COLONY",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Group of ants or penguins",
+      "Large animal settlement",
+      "Nests together"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_374",
+    "term": "SCHOOL",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Group of fish",
+      "Swimming together",
+      "Educational term"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_375",
+    "term": "DEN",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of a bear",
+      "Lair of a wolf",
+      "Hidden shelter"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_376",
+    "term": "BURROW",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Hole in the ground",
+      "Home of a rabbit",
+      "Tunnel dwelling"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_377",
+    "term": "NEST",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Bird's home",
+      "Built of twigs",
+      "Place for eggs"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_378",
+    "term": "HOLLOW",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home in a tree trunk",
+      "Squirrel's house",
+      "Owl's residence"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_379",
+    "term": "HIVE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of bees",
+      "Structure with honey",
+      "Buzzing house"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_380",
+    "term": "ANTHILL",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of ants",
+      "Mound of earth",
+      "Insect city"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_381",
+    "term": "ROE",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fish eggs",
+      "Red or black ...",
+      "Caviar source"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_382",
+    "term": "FRY",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Baby fish",
+      "Small young fish",
+      "Potato cooking method"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_383",
+    "term": "TADPOLE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Baby frog",
+      "Has a tail no legs",
+      "Swims in a puddle"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_384",
+    "term": "LARVA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Insect baby",
+      "Maggot or grub",
+      "Stage before pupa"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_385",
+    "term": "PUPA",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Stage before adult insect",
+      "Cocoon",
+      "Resting stage"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_386",
+    "term": "SHELL",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Turtle's armor",
+      "Snail's house",
+      "Hard outer covering"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_387",
+    "term": "CLAW",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Crab's pincer",
+      "Sharp nail of a cat",
+      "Lobster's weapon"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_388",
+    "term": "TRUNK",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Elephant's nose",
+      "Long flexible organ",
+      "Used for grasping"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_389",
+    "term": "TUSK",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Elephant's tooth",
+      "Ivory source",
+      "Walrus weapon"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_390",
+    "term": "HORN",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Rhino's weapon",
+      "Bull's headgear",
+      "Hard outgrowth"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_391",
+    "term": "HOOF",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Horse's foot",
+      "Hard covering of foot",
+      "Cow's shoe"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_392",
+    "term": "TAIL",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Animal's rear end",
+      "Wags when happy",
+      "Balance organ"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_393",
+    "term": "MANE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Lion's neck hair",
+      "Horse's neck hair",
+      "Symbol of male lion"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_394",
+    "term": "BEAK",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Bird's mouth",
+      "Hard pointed mouth",
+      "Woodpecker's tool"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_395",
+    "term": "WING",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Bird's arm",
+      "Organ for flight",
+      "Plane part"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_396",
+    "term": "FEATHER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Bird's covering",
+      "Light and soft",
+      "Quill"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_397",
+    "term": "SCALE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Fish covering",
+      "Reptile skin plate",
+      "Armor"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_398",
+    "term": "GILL",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fish breathing organ",
+      "Under the operculum",
+      "Extracts oxygen"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_399",
+    "term": "FLIPPER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Seal's limb",
+      "Used for swimming",
+      "Dolphin's arm"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_400",
+    "term": "WOOL",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Sheep's hair",
+      "Warm material",
+      "Sheared from sheep"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_401",
+    "term": "VIPER",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Venomous snake",
+      "Zigzag pattern",
+      "Adder's family"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_402",
+    "term": "ADDER",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Common venomous snake",
+      "Small viper",
+      "Mathematical snake"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_403",
+    "term": "MAMBA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Fast African snake",
+      "Black ...",
+      "Deadly venom"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_404",
+    "term": "RACER",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fast non-venomous snake",
+      "American snake",
+      "Speedster"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_405",
+    "term": "COPPERHEAD",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Venomous snake",
+      "Reddish head",
+      "Pit viper"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_406",
+    "term": "SLOWWORM",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Legless lizard",
+      "Looks like a snake",
+      "Not venomous"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_407",
+    "term": "WORM",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Earth...",
+      "Bait for fishing",
+      "Lives in soil"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_408",
+    "term": "ROUNDWORM",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Parasitic worm",
+      "Nematode",
+      "Intestinal pest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_409",
+    "term": "BORER",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Beetle that eats wood",
+      "Tree pest",
+      "Drills holes"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_410",
+    "term": "WEEVIL",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Beetle with a snout",
+      "Grain pest",
+      "Long nose"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_411",
+    "term": "LONGHORN",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Beetle with long antennae",
+      "Texas cattle breed",
+      "Type of beetle"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_412",
+    "term": "FIREBUG",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Red and black bug",
+      "Gregarious insect",
+      "Not a firefly"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_413",
+    "term": "GAZELLE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Graceful antelope",
+      "Fast runner",
+      "Thompson's ..."
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_414",
+    "term": "GNU",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Wildebeest",
+      "Bearded antelope",
+      "Migrating herd"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_415",
+    "term": "IMPALA",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Jumping antelope",
+      "African grazer",
+      "McDonalds logo shape horns"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_416",
+    "term": "KUDU",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Antelope with spiral horns",
+      "Grey ghost of Africa",
+      "Large antelope"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_417",
+    "term": "ORYX",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Antelope with straight horns",
+      "Gemsbok",
+      "Desert dweller"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_418",
+    "term": "YAK",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Hairy ox",
+      "Himalayan cattle",
+      "Source of milk and wool"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_419",
+    "term": "ZEBU",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Humped cattle",
+      "Indian cow",
+      "Sacred animal"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_420",
+    "term": "AUROCHS",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Extinct wild ox",
+      "Ancestor of cattle",
+      "Large bull"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_421",
+    "term": "FAWN",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Baby deer",
+      "Bambi",
+      "Young deer"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_422",
+    "term": "CHAMOIS",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Mountain goat-antelope",
+      "Agile climber",
+      "Leather type"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_423",
+    "term": "STALLION",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Male horse",
+      "Stud",
+      "Uncastrated horse"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_424",
+    "term": "MARE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Female horse",
+      "Mother of a foal",
+      "Adult female equine"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_425",
+    "term": "GELDING",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Castrated horse",
+      "Riding horse",
+      "Not a stallion"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_426",
+    "term": "HOG",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Domestic pig",
+      "Male pig",
+      "Ground..."
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_427",
+    "term": "SOW",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Female pig",
+      "Mother pig",
+      "Lays in mud"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_428",
+    "term": "BUNNY",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Cute rabbit",
+      "Easter animal",
+      "Bugs ..."
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_429",
+    "term": "WHELP",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Puppy or wolf cub",
+      "Young dog",
+      "To give birth"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_430",
+    "term": "CUB",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Baby bear or lion",
+      "Scout member",
+      "Young carnivore"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_431",
+    "term": "KIT",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Baby fox or beaver",
+      "Young rabbit",
+      "Set of tools"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_432",
+    "term": "CALF",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Baby cow or elephant",
+      "Lower leg part",
+      "Young herbivore"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_433",
+    "term": "EAGLET",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Baby eagle",
+      "Young bird of prey",
+      "Nestling"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_434",
+    "term": "OWLET",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Baby owl",
+      "Young night bird",
+      "Fluffy chick"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_435",
+    "term": "CHICK",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Baby chicken",
+      "Young bird",
+      "Yellow fluff"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_436",
+    "term": "FLEDGLING",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Young bird learning to fly",
+      "Leaving the nest",
+      "Novice"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_437",
+    "term": "KINGFISHER",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird that catches fish",
+      "Bright blue plumage",
+      "Halcyon"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_438",
+    "term": "PTARMIGAN",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "White grouse",
+      "Arctic bird",
+      "Changes color in winter"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_439",
+    "term": "CAPERCAILLIE",
+    "length": 12,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Largest grouse",
+      "Wood grouse",
+      "Mating display"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_440",
+    "term": "BUSTARD",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Heaviest flying bird",
+      "Steppe dweller",
+      "Large bird"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_441",
+    "term": "ROLLER",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Colorful bird",
+      "Blue crow-like bird",
+      "Does acrobatics"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_442",
+    "term": "MERGANSER",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Diving duck",
+      "Sawbill",
+      "Fish-eating duck"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_443",
+    "term": "SPOONBILL",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Bird with flat beak",
+      "Wading bird",
+      "Filters water"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_444",
+    "term": "SANDPIPER",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Shorebird",
+      "Runs on the beach",
+      "Long bill"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_445",
+    "term": "SNIPE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Bird with long beak",
+      "Hard to hunt",
+      "Bog bird"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_446",
+    "term": "WOODCOCK",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Forest wading bird",
+      "Camouflaged",
+      "Game bird"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_447",
+    "term": "TEAL",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Small duck",
+      "Blue-green color",
+      "Freshwater duck"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_448",
+    "term": "CRAKE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Corn...",
+      "Secretive marsh bird",
+      "Raucous call"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_449",
+    "term": "COOT",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Black water bird",
+      "White beak",
+      "Bald as a ..."
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_450",
+    "term": "GREBE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Diving bird",
+      "Great crested ...",
+      "Floating nest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_451",
+    "term": "COOT",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Black water bird with a white beak",
+      "Bald as a ...",
+      "Swims in lakes"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_452",
+    "term": "GREBE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Water bird that dives",
+      "Great Crested ...",
+      "Builds floating nests"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_453",
+    "term": "AMOEBA",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Single-celled organism",
+      "Changes its shape constantly",
+      "Moves using pseudopods"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_454",
+    "term": "CILIATE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Microscopic organism with hair-like cilia",
+      "Paramecium is one",
+      "Slipper animalcule"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_455",
+    "term": "PARASITE",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Lives on or inside another host",
+      "Flea or tapeworm",
+      "Harmful guest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_456",
+    "term": "SPONGE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Primitive sea animal with pores",
+      "Used for bathing (historically)",
+      "Filters water"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_457",
+    "term": "PLANKTON",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Drifting sea organisms",
+      "Food for whales",
+      "Sheldon J. ... (SpongeBob villain)"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_458",
+    "term": "KRILL",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Tiny crustaceans",
+      "Main diet of baleen whales",
+      "Antarctic shrimp-like animals"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_459",
+    "term": "CYCLOPS",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Tiny one-eyed crustacean",
+      "Fish food",
+      "Namesake of a mythical giant"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_460",
+    "term": "DAPHNIA",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Water flea",
+      "Transparent plankton crustacean",
+      "Aquarium fish food"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_461",
+    "term": "WOODLOUSE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Crustacean that lives on land",
+      "Rolls into a ball (pill bug)",
+      "Lives in damp wood"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_462",
+    "term": "TRIOPS",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Living fossil crustacean",
+      "Has three eyes",
+      "Lives in temporary pools"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_463",
+    "term": "LIMULUS",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Horseshoe crab",
+      "Has blue blood",
+      "Ancient marine arthropod"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_464",
+    "term": "CROSS",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "... spider (orb-weaver)",
+      "Has a white cross on its back",
+      "Common garden spider"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_465",
+    "term": "HARVESTMAN",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Daddy longlegs",
+      "Arachnid with very long legs",
+      "Not a true spider"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_466",
+    "term": "CENTIPEDE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Arthropod with many legs",
+      "Venomous predator",
+      "Name means \"100 feet\""
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_467",
+    "term": "SCUTIGERA",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "House centipede",
+      "Runs fast on walls",
+      "Eats flies"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_468",
+    "term": "CARABUS",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Ground beetle",
+      "Large predatory beetle",
+      "Runs on the ground"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_469",
+    "term": "CHAFER",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Rose ... (green beetle)",
+      "Shiny metallic beetle",
+      "Feeds on flowers"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_470",
+    "term": "BEETLE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Insect with hard wings",
+      "Generic name for Coleoptera",
+      "Black insect pest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_471",
+    "term": "CLICK",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "... beetle",
+      "Jumps with a sound",
+      "Its larva is a wireworm"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_472",
+    "term": "SCAVENGER",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Water beetle",
+      "Silver lover (Hydrophilus)",
+      "Large black aquatic beetle"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_473",
+    "term": "DIVING",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Great ... beetle",
+      "Predatory water beetle",
+      "Has oar-like legs"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_474",
+    "term": "WHIRLIGIG",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Beetle that spins on water",
+      "Has split eyes (above/below water)",
+      "Surface swimmer"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_475",
+    "term": "BREAM",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Silver ... (fish)",
+      "Flat freshwater fish",
+      "Similar to a Roach"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_476",
+    "term": "ASP",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Predatory freshwater fish",
+      "Toothless predator",
+      "Hunts by hitting water with tail"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_477",
+    "term": "SABREFISH",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Fish shaped like a sword",
+      "Pelecus cultratus",
+      "Swims sideways"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_478",
+    "term": "IDE",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Golden freshwater fish",
+      "Orfe",
+      "Relative of the chub"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_479",
+    "term": "BLUE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "... bream",
+      "Fish with a bluish tint",
+      "Flat river fish"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_480",
+    "term": "LOACH",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Spined ...",
+      "Small fish with spine under eye",
+      "Lives in sand"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_481",
+    "term": "BITTERLING",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Small fish that lays eggs in mussels",
+      "Has bitter meat",
+      "European freshwater fish"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_482",
+    "term": "BLEAK",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small shiny river fish",
+      "Swims near the surface",
+      "Silver fish"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_483",
+    "term": "GUDGEON",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bottom-dwelling river fish",
+      "Has whiskers",
+      "Small carp relative"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_484",
+    "term": "SLEEPER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Amur ... (invasive fish)",
+      "Very hardy fish",
+      "Eats other fish's eggs"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_485",
+    "term": "WHITEFISH",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Coregonus",
+      "Valuable lake fish",
+      "Member of salmon family"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_486",
+    "term": "OMUL",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Fish of Lake Baikal",
+      "Commercial Siberian fish",
+      "Tasty smoked fish"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_487",
+    "term": "GRAYLING",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Fish with a huge dorsal fin",
+      "Smells like fresh thyme/cucumber",
+      "Lives in mountain rivers"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_488",
+    "term": "CAPELIN",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small forage fish",
+      "Smelt family",
+      "Fried whole as snack"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_489",
+    "term": "SAURY",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Pacific canned fish",
+      "Long slender fish",
+      "Popular in oil"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_490",
+    "term": "SCAD",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Horse mackerel",
+      "Black Sea commercial fish",
+      "Schooling predator"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_491",
+    "term": "MULLET",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Grey ... (fish)",
+      "Jumping fish",
+      "Sonny took them to Odessa (song)"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_492",
+    "term": "GOATFISH",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Red mullet",
+      "Has chin barbels",
+      "Tasty Mediterranean fish"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_493",
+    "term": "GARFISH",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Fish with green bones",
+      "Needle-like beak",
+      "Arrow fish"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_494",
+    "term": "SUNFISH",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Ocean ... (Mola)",
+      "Heaviest bony fish",
+      "Looks like a floating head"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_495",
+    "term": "HAMMERHEAD",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Shark with T-shaped head",
+      "Eyes on the sides of head",
+      "Distinctive shark"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_496",
+    "term": "MORAY",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Eel living in reefs",
+      "Has sharp teeth and no pectoral fins",
+      "Looks scary"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_497",
+    "term": "HUMPBACK",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Whale known for songs",
+      "Breaches out of water",
+      "Has long pectoral fins"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_498",
+    "term": "BLUE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "... whale",
+      "Largest animal ever",
+      "Heart represents a car size"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_499",
+    "term": "PILOT",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "... whale",
+      "Large dolphin",
+      "Has a round head"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_500",
+    "term": "BOTTLENOSE",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Most common dolphin",
+      "Flipper (TV show)",
+      "Grey friendly dolphin"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_501",
+    "term": "BULLDOG",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Dog with a flat face",
+      "Symbol of British tenacity",
+      "Muscular dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_502",
+    "term": "DOBERMAN",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "German guard dog",
+      "Black and tan",
+      "Pointy ears (often cropped)"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_503",
+    "term": "DALMATIAN",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Spotted dog",
+      "Firehouse dog",
+      "101 ..."
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_504",
+    "term": "SAINT",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "... Bernard",
+      "Alpine rescue dog",
+      "Beethoven (movie dog)"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_505",
+    "term": "LABRADOR",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Popular family dog",
+      "Retriever",
+      "Guide dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_506",
+    "term": "PEKINGESE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Chinese lap dog",
+      "Lion dog",
+      "Flat face and fluffy"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_507",
+    "term": "CHIHUAHUA",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Smallest dog breed",
+      "Mexican dog",
+      "Purse dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_508",
+    "term": "SHARPEI",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Wrinkled dog",
+      "Chinese breed",
+      "Blue-black tongue"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_509",
+    "term": "MASTIFF",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Huge powerful dog",
+      "Tibetan ...",
+      "Guard dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_510",
+    "term": "GREYHOUND",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fastest dog breed",
+      "Racing dog",
+      "Very lean"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_511",
+    "term": "SPANIEL",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Cocker ...",
+      "Dog with long floppy ears",
+      "Gun dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_512",
+    "term": "SETTER",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Irish Red ...",
+      "Bird hunting dog",
+      "Silky coat"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_513",
+    "term": "POINTER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Hunting dog that points",
+      "Smooth coat",
+      "Gun dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_514",
+    "term": "GIANT",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "... Schnauzer",
+      "Large bearded dog",
+      "Police dog type"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_515",
+    "term": "SCHNAUZER",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bearded German dog",
+      "Miniature or Giant",
+      "Wiry coat"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_516",
+    "term": "PINSCHER",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Doberman ...",
+      "German smooth-haired dog",
+      "Miniature ... (toy breed)"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_517",
+    "term": "WAXWING",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird with a crest",
+      "Bohemian ...",
+      "Eats berries in winter"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_518",
+    "term": "ROBIN",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird with a red breast",
+      "Gardener's friend",
+      "Sings in the evening"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_519",
+    "term": "NUTHATCH",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird that walks down trees headfirst",
+      "Forest acrobat",
+      "Wedges nuts in bark"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_520",
+    "term": "CREEPER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Tree ... (bird)",
+      "Spirals up tree trunks",
+      "Camouflaged like bark"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_521",
+    "term": "GOLDCREST",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Smallest European bird",
+      "Has a yellow stripe on head",
+      "Kinglet"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_522",
+    "term": "REDPOLL",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Small finch with red forehead",
+      "Arctic bird",
+      "Visits feeders in winter"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_523",
+    "term": "GREENFINCH",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird with green feathers",
+      "Garden bird",
+      "Eats seeds"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_524",
+    "term": "CROSSBILL",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Bird with crossed beak tips",
+      "Extracts seeds from pine cones",
+      "Red male, green female"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_525",
+    "term": "DOVE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Turtle ...",
+      "Symbol of peace",
+      "Smaller relative of pigeon"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_526",
+    "term": "WHOOPER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "... swan",
+      "Swan with yellow beak",
+      "Named for its loud call"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_527",
+    "term": "MUTE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "... swan",
+      "Swan with orange beak",
+      "Quiet bird"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_528",
+    "term": "GOLDENEYE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Diving duck",
+      "Nests in tree holes",
+      "Has yellow eyes"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_529",
+    "term": "TUFTED",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "... duck",
+      "Black duck with a ponytail",
+      "Diving bird"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_530",
+    "term": "WIGEON",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Wild duck",
+      "Whistles",
+      "Red-headed duck"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_531",
+    "term": "DORMOUSE",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Sleepy rodent",
+      "Guest at Mad Hatter's tea party",
+      "Hibernates long"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_532",
+    "term": "GLIS",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Edible dormouse",
+      "Large dormouse",
+      "Looks like a small squirrel"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_533",
+    "term": "SPALAX",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Mole rat",
+      "Blind rodent",
+      "Digs with teeth"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_534",
+    "term": "GERBIL",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Desert rodent",
+      "Popular pet",
+      "Has a tufted tail"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_535",
+    "term": "DEGU",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Chilean squirrel",
+      "Rodent from Andes",
+      "Diurnal pet rodent"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_536",
+    "term": "AGOUTI",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Golden hare",
+      "Rodent of South American forests",
+      "Burries seeds"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_537",
+    "term": "MARA",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Patagonian cavy",
+      "Rodent that looks like a hare",
+      "Relative of capybara"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_538",
+    "term": "BANDICOOT",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Marsupial badger",
+      "Crash ... (video game character)",
+      "Australian omnivore"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_539",
+    "term": "QUOKKA",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Happiest animal in the world",
+      "Smiling marsupial",
+      "Lives on Rottnest Island"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_540",
+    "term": "WALLABY",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Small kangaroo",
+      "Marsupial jumper",
+      "Australian native"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_541",
+    "term": "CUSCUS",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Tree marsupial",
+      "Has prehensile tail",
+      "Lives in New Guinea"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_542",
+    "term": "THYLACINE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Tasmanian tiger",
+      "Extinct marsupial predator",
+      "Had stripes on back"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_543",
+    "term": "POSSUM",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Australian marsupial",
+      "Brushtail ...",
+      "Differs from Opossum"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_544",
+    "term": "JAGUARUNDI",
+    "length": 10,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Weasel cat",
+      "Small head long body",
+      "Wild cat of Americas"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_545",
+    "term": "MARGAY",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Tree ocelot",
+      "Climbs down headfirst",
+      "Big eyed cat"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_546",
+    "term": "URIAL",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Wild sheep with mane",
+      "Steppe sheep",
+      "Lives in Asia"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_547",
+    "term": "ARGALI",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Largest wild sheep",
+      "Has massive horns",
+      "Mongolian sheep"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_548",
+    "term": "BIGHORN",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "... sheep",
+      "Lives in Rockies",
+      "Male rams headbutt"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_549",
+    "term": "IBEX",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Alpine goat",
+      "Has very long curved horns",
+      "Climbs steep dams"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_550",
+    "term": "GAYAL",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Domesticated gaur",
+      "Ox from India",
+      "Mithun"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_551",
+    "term": "BANTENG",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Wild cattle of SE Asia",
+      "White stockings on legs",
+      "Bali cattle ancestor"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_552",
+    "term": "KOUPREY",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Forest ox",
+      "Rare Cambodian bovine",
+      "Frayed horns"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_553",
+    "term": "ANOA",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Dwarf buffalo",
+      "Lives in Sulawesi",
+      "Smallest wild cattle"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_554",
+    "term": "FANG",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Long sharp tooth",
+      "Snake's needle",
+      "Vampire's tooth"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_555",
+    "term": "CLAW",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Nail of a beast",
+      "Cat's weapon",
+      "Retractable in felines"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_556",
+    "term": "TALON",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Claw of a bird of prey",
+      "Eagle's weapon",
+      "Grabs the prey"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_557",
+    "term": "MUZZLE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Face of a dog",
+      "Projecting nose and jaws",
+      "Snout of an animal"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_558",
+    "term": "SNOUT",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Pig's nose",
+      "Used for digging",
+      "Long nose of a beast"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_559",
+    "term": "NOSE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Tip of the snout",
+      "Organ of smell",
+      "Wet on a healthy dog"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_560",
+    "term": "BRISTLE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Stiff hair of a pig",
+      "Boar's fur",
+      "Used for brushes"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_561",
+    "term": "WHISKER",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 3,
+    "questions": [
+      "Vibrissa",
+      "Tactile hair on cat's face",
+      "Helps sense surroundings"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_562",
+    "term": "HOOF",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Foot of a cow",
+      "Cloven ...",
+      "Hard foot covering"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_563",
+    "term": "SPINE",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Backbone",
+      "Main bone support",
+      "Vertebral column"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_564",
+    "term": "SKULL",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Bone of the head",
+      "Protects the brain",
+      "Jaw is attached to it"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_565",
+    "term": "SKELETON",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "All bones together",
+      "Frame of the body",
+      "Internal structure"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_566",
+    "term": "CARTILAGE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Soft bone",
+      "Shark skeleton material",
+      "Found in ears and nose"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_567",
+    "term": "MEAT",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Animal muscle as food",
+      "Carnivore's diet",
+      "Beef or pork"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_568",
+    "term": "LARD",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Pig fat",
+      "Used in cooking",
+      "Rendered fat"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_569",
+    "term": "FAT",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Energy storage",
+      "Blubber in whales",
+      "Keeps animals warm"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_570",
+    "term": "SKIN",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Outer covering",
+      "Snakes shed it",
+      "Leather source"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_571",
+    "term": "FUR",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Animal's coat",
+      "Thick hair",
+      "Valued in mink"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_572",
+    "term": "DOWN",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Soft feathers",
+      "Warm underlayer",
+      "Used in pillows"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_573",
+    "term": "BEAST",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Wild animal",
+      "Beauty and the ...",
+      "Large creature"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_574",
+    "term": "BIRD",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Winged animal",
+      "Has feathers",
+      "Lays eggs"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_575",
+    "term": "FISH",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Lives in water",
+      "Has gills",
+      "Swims"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_576",
+    "term": "REPTILE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Cold-blooded animal",
+      "Snake or lizard",
+      "Scaly creature"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_577",
+    "term": "CREATURE",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Living being",
+      "Monster",
+      "Any animal"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_578",
+    "term": "BEING",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Living entity",
+      "Human ...",
+      "Alive thing"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_579",
+    "term": "ORGANISM",
+    "length": 8,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Living body",
+      "Studied in biology",
+      "System of life"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_580",
+    "term": "MALE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Boy animal",
+      "Buck or bull",
+      "Usually brighter in birds"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_581",
+    "term": "FEMALE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Girl animal",
+      "Doe or cow",
+      "Gives birth"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_582",
+    "term": "BABY",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Newborn animal",
+      "Small offspring",
+      "Cub or calf"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_583",
+    "term": "ZOO",
+    "length": 3,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Place to see wild animals",
+      "Park with cages",
+      "Exhibition of beasts"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_584",
+    "term": "RESERVE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Protected nature area",
+      "Place where hunting is banned",
+      "Wildlife sanctuary"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_585",
+    "term": "ENCLOSURE",
+    "length": 9,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Fenced area in a zoo",
+      "Pen for animals",
+      "Habitat space"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_586",
+    "term": "CAGE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home for a parrot",
+      "Bars for a beast",
+      "Golden ... (captivity)"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_587",
+    "term": "FEEDER",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Bird table",
+      "Box with food",
+      "Place to eat"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_588",
+    "term": "PASTURE",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Place where cows eat",
+      "Meadow for grazing",
+      "Field of grass"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_589",
+    "term": "FARM",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Place for raising livestock",
+      "Home of domestic animals",
+      "Old MacDonald had one"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_590",
+    "term": "SAVANNA",
+    "length": 7,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "African steppe",
+      "Home of lions and giraffes",
+      "Grassland with few trees"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_591",
+    "term": "JUNGLE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Dense tropical forest",
+      "Mowgli's home",
+      "Rainforest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_592",
+    "term": "TAIGA",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Coniferous forest of the north",
+      "Home of bears and lynx",
+      "Siberian forest"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_593",
+    "term": "TUNDRA",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 2,
+    "questions": [
+      "Treeless northern plain",
+      "Home of reindeer",
+      "Land of permafrost"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_594",
+    "term": "DESERT",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Place where camels live",
+      "Sea of sand",
+      "Sahara or Gobi"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_595",
+    "term": "OCEAN",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of whales and sharks",
+      "Huge body of water",
+      "Pacific or Atlantic"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_596",
+    "term": "RIVER",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of pike and catfish",
+      "Flowing fresh water",
+      "Nile or Amazon"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_597",
+    "term": "LAKE",
+    "length": 4,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of carp and frogs",
+      "Standing water",
+      "Loch Ness"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_598",
+    "term": "SWAMP",
+    "length": 5,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of herons",
+      "Marshland",
+      "Place with frogs and mosquitoes"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_599",
+    "term": "FOREST",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of wolf and fox",
+      "Lots of trees",
+      "Green lungs of the planet"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  },
+  {
+    "id": "animal_en_600",
+    "term": "STEPPE",
+    "length": 6,
+    "theme": "Animal Kingdom",
+    "difficulty": 1,
+    "questions": [
+      "Home of gopher and bustard",
+      "Endless field",
+      "Grassy plain"
+    ],
+    "images": { "square": null, "horizontal": null, "vertical": null },
+    "usage_count": 0
+  }  
 ]
