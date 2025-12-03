@@ -7,7 +7,6 @@ namespace ScanwordGenerator
     {
         // Подія натискання кнопки "ПОЧАТИ"
         public event EventHandler StartButtomClicked;
-
         // Подія зміни мови (передає "en" або "ua")
         public event EventHandler<string> LanguageChanged;
 
@@ -24,7 +23,7 @@ namespace ScanwordGenerator
             comboBox_Languages.Items.Add("Українська"); // Index 0
             comboBox_Languages.Items.Add("English");    // Index 1
 
-            // Вибираємо українську за замовчуванням
+            // Українська за замовчуванням
             comboBox_Languages.SelectedIndex = 0;
 
             // Підписуємось на зміну вибору
@@ -40,7 +39,6 @@ namespace ScanwordGenerator
             }
         }
 
-        // Цей метод викликається при натисканні кнопки "ПОЧАТИ"
         private void start_buttom_Click(object sender, EventArgs e)
         {
             StartButtomClicked?.Invoke(this, EventArgs.Empty);

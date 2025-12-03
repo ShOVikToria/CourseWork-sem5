@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace ScanwordGenerator
 {
@@ -25,7 +21,7 @@ namespace ScanwordGenerator
             }
         }
 
-        // НОВИЙ МЕТОД: Повертає слова тільки для конкретної теми
+        // Повертає слова тільки для обраної теми
         public List<WordData> GetWordsByTheme(string theme)
         {
             if (_allWords == null) return new List<WordData>();
@@ -36,8 +32,6 @@ namespace ScanwordGenerator
                 .ToList();
         }
 
-        // ОНОВЛЕНИЙ МЕТОД: Тепер приймає список слів (wordsToUse) як аргумент
-        // Додано параметр string imagePrefix
         public Cell[,] GenerateBestGrid(int width, int height, bool useImages, List<WordData> wordsToUse, string imagePrefix, int attempts = 30)
         {
             if (wordsToUse == null || !wordsToUse.Any()) return null;

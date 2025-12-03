@@ -1,12 +1,7 @@
-﻿using System;
+﻿using System.Drawing.Imaging;
+using PdfSharp.Drawing;       
+using PdfSharp.Pdf;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging; // Для PNG
-using System.IO;
-using System.Windows.Forms;
-using PdfSharp.Drawing;       // Для PDF
-using PdfSharp.Pdf;           // Для PDF
-using ScanwordGenerator;
 
 namespace ScanwordGenerator
 {
@@ -37,30 +32,23 @@ namespace ScanwordGenerator
             button1.Click += ButtonGenerate_Click;
             checkBox_ShowAnswers.CheckedChanged += CheckBoxShowAnswers_CheckedChanged;
             LabelBack.Click += LabelBack_Click;
-
-            // Якщо кнопки експорту не підписані в дизайнері:
-            // button_PNG.Click += button_PNG_Click;
-            // button_PDF.Click += button_PDF_Click;
         }
 
         private void InitializeTopics()
         {
             Topics.Items.Clear();
             Topics.Items.AddRange(new string[] {
-                "Animal Kingdom",        // 0
-                "Plant Kingdom",         // 1
-                "Geography",             // 2
-                "Space & Weather",       // 3
-                "Movies & TV",           // 4
-                "Music",                 // 5
-                "Literature",            // 6
-                "Art & Architecture",    // 7
-                "Sports",                // 8
-                "Science & Tech",        // 9
-                "History",               // 10
-                "Cooking",               // 11
-                "Home & Living",         // 12
-                "Professions & Hobbies"  // 13
+                "Animal Kingdom",        
+                "Plant Kingdom",         
+                "Geography",             
+                "Space & Weather",       
+                "Movies & TV",           
+                "Music",                 
+                "Art & Architecture",    
+                "Sports",                
+                "Cooking",               
+                "Home & Living",         
+                "Professions & Hobbies"  
             });
             Topics.SelectedIndex = 0;
         }
@@ -77,7 +65,6 @@ namespace ScanwordGenerator
                 MessageBox.Show("Dictionary not loaded! Check words_en.json.");
                 return;
             }
-
             string selectedTopic = Topics.SelectedItem.ToString();
             var themeWords = _service.GetWordsByTheme(selectedTopic);
 
@@ -86,13 +73,20 @@ namespace ScanwordGenerator
                 MessageBox.Show($"Not enough words in topic '{selectedTopic}' ({themeWords.Count}).");
                 return;
             }
-
-            // --- ВИЗНАЧЕННЯ ПРЕФІКСУ (Mapping for English) ---
+            // --- ВИЗНАЧЕННЯ ПРЕФІКСУ ---
             string imagePrefix = "animals"; // Default
 
             if (selectedTopic == "Animal Kingdom") imagePrefix = "animals";
             else if (selectedTopic == "Movies & TV") imagePrefix = "cinema";
-            // -------------------------------------------------
+            else if (selectedTopic == "Plant Kingdom") imagePrefix = "plants";
+            else if (selectedTopic == "Space & Weather") imagePrefix = "space";
+            else if (selectedTopic == "Music") imagePrefix = "music";
+            else if (selectedTopic == "Sports") imagePrefix = "sport";
+            else if (selectedTopic == "Cooking") imagePrefix = "cooking";
+            else if (selectedTopic == "Home & Living") imagePrefix = "home";
+            else if (selectedTopic == "Professions & Hobbies") imagePrefix = "professions";
+            else if (selectedTopic == "Art & Architecture") imagePrefix = "art";
+            else if (selectedTopic == "Geography") imagePrefix = "geography";
 
             var sizeResult = GetSelectedSize();
             if (sizeResult == null) return;
@@ -113,12 +107,8 @@ namespace ScanwordGenerator
                 if (_currentGrid != null)
                 {
                     UpdateImage();
-
                     long totalTime = sw.ElapsedMilliseconds;
                     sw.Stop();
-
-                    // Логування (опціонально)
-                    // PerformanceLogger.LogGeneration(w, h, useImages, genTime, totalTime);
                 }
                 else
                 {
@@ -158,7 +148,6 @@ namespace ScanwordGenerator
                     MessageBox.Show("Please enter valid integer numbers!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
                 }
-
                 if (w < 5 || w > 50 || h < 5 || h > 50)
                 {
                     MessageBox.Show("Size must be between 5 and 50 cells!", "Invalid Size", MessageBoxButtons.OK, MessageBoxIcon.Warning);

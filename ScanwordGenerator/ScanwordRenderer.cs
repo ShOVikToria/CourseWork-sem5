@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.IO;
-using System.Windows.Forms;
+﻿using System.Drawing.Drawing2D;
 
 namespace ScanwordGenerator
 {
@@ -12,9 +8,6 @@ namespace ScanwordGenerator
         private readonly Brush _brushGray = new SolidBrush(Color.FromArgb(220, 220, 220));
         private readonly Brush _brushArrow = Brushes.Black;
         private readonly Pen _penBorder = new Pen(Color.Gray, 1);
-
-        // Пен для контуру стрілки (щоб було видно на темних картинках)
-        private readonly Pen _penArrowOutline = new Pen(Color.Black, 2);
 
         public Bitmap DrawGrid(Cell[,] grid, int widthPx, int heightPx, bool showAnswers)
         {
@@ -134,7 +127,7 @@ namespace ScanwordGenerator
 
                 g.DrawRectangle(new Pen(Color.Gray, 2), px, py, imgWidth, imgHeight);
 
-                // Малюємо стрілку ПОВЕРХ картинки
+                // Малюємо стрілку
                 DrawArrowForPicture(g, px, py, size, cell.ArrowDirection, cell.ImageWidthCells, cell.ImageHeightCells);
             }
         }
@@ -190,7 +183,7 @@ namespace ScanwordGenerator
             g.FillPolygon(_brushArrow, triangle);
         }
 
-        // Стрілка для КАРТИНКИ (Виправлено координати)
+        // Стрілка для КАРТИНКИ
         private void DrawArrowForPicture(Graphics g, float imgX, float imgY, float cellSize, string direction, int wCells, int hCells)
         {
             float arrowLen = cellSize * 0.2f; // Розмір стрілки
@@ -224,9 +217,6 @@ namespace ScanwordGenerator
                     new PointF(targetCenterX + arrowLen/1.5f, bottomEdgeY)  
                 };
             }
-
-            // Малюємо білий контур для видимості на темному фоні
-            g.DrawPolygon(_penArrowOutline, triangle);
             // Малюємо чорну стрілку
             g.FillPolygon(Brushes.Black, triangle);
         }

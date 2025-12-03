@@ -21,7 +21,7 @@
         public int ImageHeightCells { get; set; }
         public bool IsPictureMainCell { get; set; }
 
-        // НОВЕ ПОЛЕ: Зміщення стрілки відносно початку картинки
+        // Зміщення стрілки відносно початку картинки
         // 0 = перший рядок, 1 = другий і т.д.
         public int ArrowOffset { get; set; }
     }

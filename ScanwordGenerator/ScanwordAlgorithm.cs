@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace ScanwordGenerator
+﻿namespace ScanwordGenerator
 {
     public class ScanwordAlgorithm
     {
@@ -70,9 +66,7 @@ namespace ScanwordGenerator
                 else _targetImageCount = _rng.Next(5, 9);
             }
             else
-            {
-                _targetImageCount = 0;
-            }
+            { _targetImageCount = 0;}
 
             var usedWords = new HashSet<string>();
 
@@ -87,7 +81,6 @@ namespace ScanwordGenerator
             if (useImages)
             {
                 var imageWords = allWords.Where(w => w.Images != null && w.Images.HasAny && w.Term.Length >= 3).ToList();
-
                 if (imageWords.Any())
                 {
                     firstWord = imageWords[_rng.Next(imageWords.Count)];
@@ -102,7 +95,6 @@ namespace ScanwordGenerator
                     }
                 }
             }
-
             if (firstWord == null)
             {
                 var startWords = allWords.Where(w => w.Term.Length >= 5).ToList();
@@ -112,7 +104,7 @@ namespace ScanwordGenerator
                 firstWord = startWords[_rng.Next(startWords.Count)];
             }
 
-            // 2. РОЗРАХУНОК ПОЗИЦІЇ (З ВИПРАВЛЕННЯМ ПОМИЛКИ ІНДЕКСУ)
+            // 2. РОЗРАХУНОК ПОЗИЦІЇ
             int startX, startY, defX, defY;
 
             if (firstIsHor)
@@ -120,8 +112,6 @@ namespace ScanwordGenerator
                 int requiredWidth = firstWord.Term.Length + defW;
                 startX = Math.Max(defW, (_width - requiredWidth) / 2);
                 startY = _height / 2;
-
-                // FIX: Перевірка правого краю (щоб слово не вилізло за ширину)
                 if (startX + firstWord.Term.Length > _width)
                 {
                     startX = _width - firstWord.Term.Length;
@@ -135,8 +125,6 @@ namespace ScanwordGenerator
                 int requiredHeight = firstWord.Term.Length + defH;
                 startX = _width / 2;
                 startY = Math.Max(defH, (_height - requiredHeight) / 2);
-
-                // FIX: Перевірка нижнього краю (щоб слово не вилізло за висоту)
                 if (startY + firstWord.Term.Length > _height)
                 {
                     startY = _height - firstWord.Term.Length;
@@ -193,7 +181,6 @@ namespace ScanwordGenerator
         {
             var list = new List<(string, int, int)>();
 
-            // Замість "animals_s" використовуємо змінну _imagePrefix + "_s"
             if (!string.IsNullOrEmpty(word.Images.Square))
                 list.Add(($"{_imagePrefix}_s/" + word.Images.Square, 2, 2));
 
@@ -243,11 +230,9 @@ namespace ScanwordGenerator
                                     break;
                                 }
                             }
-
                             if (fit) return true;
                             continue;
                         }
-
                         if (!prioritizeImage || (word.Images == null || !word.Images.HasAny))
                         {
                             if (TryFitShape(word, x, y, i, tryHor, 1, 1, null, usedWords, anchors)) return true;
@@ -264,7 +249,6 @@ namespace ScanwordGenerator
         {
             int wordStartX, wordStartY;
             int defStartX, defStartY;
-
             if (isHor)
             {
                 wordStartX = anchorX - charIndex;
@@ -370,7 +354,6 @@ namespace ScanwordGenerator
             return false;
         }
 
-        // ОНОВЛЕНИЙ МЕТОД PlaceWord
         private void PlaceWord(WordData word, int wordX, int wordY, bool isHor, int defW, int defH, string imagePath, string question, int defX, int defY)
         {
             // Розраховуємо зміщення стрілки
@@ -406,7 +389,7 @@ namespace ScanwordGenerator
                 }
             }
 
-            // 2. Ставимо літери (без змін)
+            // 2. Ставимо літери
             for (int i = 0; i < word.Length; i++)
             {
                 int lx = isHor ? wordX + i : wordX;
@@ -444,7 +427,5 @@ namespace ScanwordGenerator
                 }
             return clone;
         }
-
-        public void RestoreGrid(Cell[,] state) { Grid = state; }
     }
 }

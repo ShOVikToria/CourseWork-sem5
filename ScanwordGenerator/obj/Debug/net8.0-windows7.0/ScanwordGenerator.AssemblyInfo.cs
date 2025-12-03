@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScanwordGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b69cac8063b127f2e0cfe23519470665d9bd2b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d6e9421b944fb262c4d397575b3755332158e63")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScanwordGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScanwordGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

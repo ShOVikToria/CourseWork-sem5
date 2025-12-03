@@ -7,7 +7,6 @@ namespace ScanwordGenerator
     {
         // Подія натискання кнопки "START"
         public event EventHandler StartButtomClicked;
-
         // Подія зміни мови
         public event EventHandler<string> LanguageChanged;
 
@@ -15,9 +14,6 @@ namespace ScanwordGenerator
         {
             InitializeComponent();
             InitializeLanguageComboBox();
-
-            // Примусово підписуємо кнопку на клік (страховка)
-            start_buttom.Click += start_buttom_Click;
         }
 
         private void InitializeLanguageComboBox()
@@ -36,14 +32,13 @@ namespace ScanwordGenerator
 
         private void ComboBox_Languages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Якщо обрали Ukrainian (індекс 0), повідомляємо головну форму
+            // Якщо обрали Українська (індекс 0), повідомляємо головну форму
             if (comboBox_Languages.SelectedIndex == 0)
             {
                 LanguageChanged?.Invoke(this, "ua");
             }
         }
 
-        // Цей метод викликається при натисканні кнопки "START"
         private void start_buttom_Click(object sender, EventArgs e)
         {
             StartButtomClicked?.Invoke(this, EventArgs.Empty);

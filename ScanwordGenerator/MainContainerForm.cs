@@ -5,7 +5,6 @@ namespace ScanwordGenerator
 {
     public partial class MainContainerForm : Form
     {
-        // Зберігаємо поточну мову ("ua" або "en")
         private string _currentLanguage = "ua";
 
         public MainContainerForm()
@@ -32,10 +31,10 @@ namespace ScanwordGenerator
                 StartScreen_ua startScreen = new StartScreen_ua();
                 startScreen.Dock = DockStyle.Fill;
 
-                // 1. Якщо натиснули "ПОЧАТИ" -> йдемо на головний екран
+                // 1. Додаємо перехід на головну сторінку до події натискання на кнопку "ПОЧАТИ"
                 startScreen.StartButtomClicked += (s, e) => ShowMainScreen();
 
-                // 2. Якщо змінили мову в комбобоксі -> перезавантажуємо цей метод з новою мовою
+                // 2. Додаємо перезавантаження методі з новою мовою до події зміни мови в комбобоксі
                 startScreen.LanguageChanged += (s, newLang) => ShowStartScreen(newLang);
 
                 ContentPanel.Controls.Add(startScreen);
@@ -67,7 +66,7 @@ namespace ScanwordGenerator
                 MainScreen_ua mainScreen = new MainScreen_ua();
                 mainScreen.Dock = DockStyle.Fill;
 
-                // Якщо натиснули "Назад" -> повертаємось на старт (зберігаючи мову)
+                //Додаємо перехід на стартову сторінку до події натискання на кнопку "Назад"
                 mainScreen.BackButtonClicked += (s, e) => ShowStartScreen("ua");
 
                 ContentPanel.Controls.Add(mainScreen);

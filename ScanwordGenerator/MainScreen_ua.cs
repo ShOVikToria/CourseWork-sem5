@@ -1,11 +1,6 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using ScanwordGenerator;
-using System.Drawing.Imaging; // Для PNG
+﻿using System.Drawing.Imaging; // Для PNG
 using PdfSharp.Pdf;           // Для PDF
-using PdfSharp.Drawing;       // Для малювання в PDF
-using System.IO;              // Для роботи з пам'яттю
+using PdfSharp.Drawing;       // Для малювання 
 using System.Diagnostics;
 
 namespace ScanwordGenerator
@@ -26,7 +21,6 @@ namespace ScanwordGenerator
             InitializeTopics();
             radioButton_SizeSmall.Checked = true;
 
-            // Завантажуємо ЄДИНИЙ великий файл
             try
             {
                 _service.LoadDictionary("words_ua.json");
@@ -44,19 +38,15 @@ namespace ScanwordGenerator
         private void InitializeTopics()
         {
             Topics.Items.Clear();
-            // ВАЖЛИВО: Ці назви мають співпадати з полем "theme" у JSON!
             Topics.Items.AddRange(new string[] {
                 "Тваринний світ",
                 "Світ рослин",
                 "Географія",
                 "Космос і погода",
-                "Кіно і ТБ",        // Перевірте, чи у JSON так само ("Кіно і ТБ" чи "Кіно і телебачення")
+                "Кіно і ТБ",        
                 "Музика",
-                "Література",
                 "Мистецтво та архітектура",
                 "Спорт",
-                "Наука і техніка",
-                "Історія",
                 "Кулінарія",
                 "Дім та побут",
                 "Професії та хобі"
@@ -99,7 +89,6 @@ namespace ScanwordGenerator
                 // 3. Якщо все добре - повертаємо розміри
                 return (w, h);
             }
-
             return (15, 15);
         }
 
@@ -126,6 +115,14 @@ namespace ScanwordGenerator
             if (selectedTopic == "Тваринний світ") imagePrefix = "animals";
             else if (selectedTopic == "Кіно і ТБ") imagePrefix = "cinema";
             else if (selectedTopic == "Світ рослин") imagePrefix = "plants";
+            else if (selectedTopic == "Космос і погода") imagePrefix = "space";
+            else if (selectedTopic == "Музика") imagePrefix = "music";
+            else if (selectedTopic == "Спорт") imagePrefix = "sport";
+            else if (selectedTopic == "Кулінарія") imagePrefix = "cooking";
+            else if (selectedTopic == "Дім та побут") imagePrefix = "home";
+            else if (selectedTopic == "Професії та хобі") imagePrefix = "professions";
+            else if (selectedTopic == "Мистецтво та архітектура") imagePrefix = "art";
+            else if (selectedTopic == "Географія") imagePrefix = "geography";
 
             // 2. Отримання налаштувань
             var sizeResult = GetSelectedSize();
@@ -152,11 +149,8 @@ namespace ScanwordGenerator
                 if (_currentGrid != null)
                 {
                     UpdateImage();
-
                     long totalTime = sw.ElapsedMilliseconds;
                     sw.Stop();
-
-                    // PerformanceLogger.LogGeneration(w, h, useImages, genTime, totalTime);
                 }
                 else
                 {
@@ -170,12 +164,10 @@ namespace ScanwordGenerator
             }
         }
 
-
         private void buttonTest_Click(object sender, EventArgs e)
         {
             if (!_service.IsDictionaryLoaded) return;
 
-            // Беремо слова з найбагатшої теми для чесного тесту
             var words = _service.GetWordsByTheme("Тваринний світ");
 
             if (words.Count < 10)
@@ -186,13 +178,10 @@ namespace ScanwordGenerator
 
             Cursor.Current = Cursors.WaitCursor;
 
-            // ЗАПУСК БЕНЧМАРКУ
-            //BenchmarkRunner.RunFullTest(_service, words);
+            BenchmarkRunner.RunFullTest(_service, words, "animals");
 
             Cursor.Current = Cursors.Default;
         }
-
-
 
         private void CheckBoxShowAnswers_CheckedChanged(object sender, EventArgs e) => UpdateImage();
 
@@ -204,8 +193,7 @@ namespace ScanwordGenerator
             ScanwordFild.Image = resultImage;
         }
 
-
-        // --- ОНОВЛЕНИЙ ЕКСПОРТ У PNG (Без зайвих полів) ---
+        // --- ЕКСПОРТ У PNG ---
         private void button_PNG_Click(object sender, EventArgs e)
         {
             if (_currentGrid == null)
@@ -223,8 +211,8 @@ namespace ScanwordGenerator
                 {
                     bool withAnswers = checkBox_DownloadWithAnswers.Checked;
 
-                    // 1. Розраховуємо ІДЕАЛЬНІ розміри картинки
-                    // Задаємо бажаний розмір клітинки для експорту (наприклад, 60 пікселів - це гарна якість)
+                    // 1. Розраховуємо розміри картинки
+                    // Задаємо бажаний розмір клітинки для експорту
                     int exportCellSize = 60;
                     int padding = 10; // Невеликий відступ по краях
 
@@ -240,13 +228,12 @@ namespace ScanwordGenerator
                     {
                         bmp.Save(sfd.FileName, ImageFormat.Png);
                     }
-
                     MessageBox.Show("Збережено!");
                 }
             }
         }
 
-        // --- ОНОВЛЕНИЙ ЕКСПОРТ У PDF (Авто-орієнтація + Масштабування) ---
+        // --- ЕКСПОРТ У PDF ---
         private void button_PDF_Click(object sender, EventArgs e)
         {
             if (_currentGrid == null)
@@ -267,14 +254,12 @@ namespace ScanwordGenerator
                         using (PdfDocument document = new PdfDocument())
                         {
                             document.Info.Title = "Scanword";
-
                             // 1. Створюємо сторінку
                             PdfPage page = document.AddPage();
                             page.Size = PdfSharp.PageSize.A4;
-
                             // 2. Генеруємо високоякісну картинку (Tight Crop)
                             bool withAnswers = checkBox_DownloadWithAnswers.Checked;
-                            int exportCellSize = 80; // Для PDF можна взяти ще більшу якість
+                            int exportCellSize = 80; 
                             int gridW = _currentGrid.GetLength(1);
                             int gridH = _currentGrid.GetLength(0);
                             int finalPixelW = (gridW * exportCellSize) + 10;
@@ -284,13 +269,9 @@ namespace ScanwordGenerator
                             {
                                 // 3. АВТОМАТИЧНА ОРІЄНТАЦІЯ
                                 if (finalPixelW > finalPixelH)
-                                {
-                                    page.Orientation = PdfSharp.PageOrientation.Landscape;
-                                }
+                                {page.Orientation = PdfSharp.PageOrientation.Landscape;}
                                 else
-                                {
-                                    page.Orientation = PdfSharp.PageOrientation.Portrait;
-                                }
+                                {page.Orientation = PdfSharp.PageOrientation.Portrait;}
 
                                 using (MemoryStream ms = new MemoryStream())
                                 {
