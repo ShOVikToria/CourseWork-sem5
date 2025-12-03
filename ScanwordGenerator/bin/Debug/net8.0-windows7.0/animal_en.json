@@ -5393,9 +5393,9 @@
       "Wapiti"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "elk_s.jpg",
+      "horizontal": "elk_h.jpg",
+      "vertical": "elk_v.jpg"
     },
     "usage_count": 0
   },
@@ -5807,9 +5807,9 @@
       "Baltimore ... (baseball team)"
     ],
     "images": {
-      "square": null,
-      "horizontal": null,
-      "vertical": null
+      "square": "oriole_s.jpg",
+      "horizontal": "oriole_h.jpg",
+      "vertical": "oriole_v.jpg"
     },
     "usage_count": 0
   },
@@ -8942,7 +8942,11 @@
       "Smiling marsupial",
       "Lives on Rottnest Island"
     ],
-    "images": { "square": null, "horizontal": null, "vertical": null },
+    "images": { 
+      "square": "quokka_s.jpg",
+      "horizontal": "quokka_h.jpg",
+      "vertical": "quokka_v.jpg" 
+    },
     "usage_count": 0
   },
   {

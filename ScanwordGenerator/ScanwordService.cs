@@ -25,20 +25,33 @@ namespace ScanwordGenerator
             }
         }
 
-        // У методі GenerateBestGrid додайте параметр:
-        public Cell[,] GenerateBestGrid(int width, int height, bool useImages, int attempts = 50)
+        // НОВИЙ МЕТОД: Повертає слова тільки для конкретної теми
+        public List<WordData> GetWordsByTheme(string theme)
         {
-            if (!IsDictionaryLoaded) return null;
+            if (_allWords == null) return new List<WordData>();
 
-            var validWords = _allWords.Where(w => w.Term.Length < width && w.Term.Length < height).ToList();
+            // Порівнюємо без урахування регістру (щоб "Кіно" знайшло "кіно")
+            return _allWords
+                .Where(w => w.Theme.Trim().Equals(theme.Trim(), StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
 
-            var generator = new ScanwordAlgorithm(width, height);
+        // ОНОВЛЕНИЙ МЕТОД: Тепер приймає список слів (wordsToUse) як аргумент
+        // Додано параметр string imagePrefix
+        public Cell[,] GenerateBestGrid(int width, int height, bool useImages, List<WordData> wordsToUse, string imagePrefix, int attempts = 30)
+        {
+            if (wordsToUse == null || !wordsToUse.Any()) return null;
+
+            var validWords = wordsToUse.Where(w => w.Length < width && w.Length < height).ToList();
+
+            // Передаємо префікс у конструктор
+            var generator = new ScanwordAlgorithm(width, height, imagePrefix);
+
             double bestScore = -1;
             Cell[,] bestGrid = null;
 
             for (int i = 0; i < attempts; i++)
             {
-                // ПЕРЕДАЄМО useImages СЮДИ
                 generator.Generate(validWords, useImages);
                 double score = generator.CalculateFillPercentage();
 

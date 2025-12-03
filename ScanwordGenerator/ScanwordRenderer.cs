@@ -13,6 +13,9 @@ namespace ScanwordGenerator
         private readonly Brush _brushArrow = Brushes.Black;
         private readonly Pen _penBorder = new Pen(Color.Gray, 1);
 
+        // Пен для контуру стрілки (щоб було видно на темних картинках)
+        private readonly Pen _penArrowOutline = new Pen(Color.Black, 2);
+
         public Bitmap DrawGrid(Cell[,] grid, int widthPx, int heightPx, bool showAnswers)
         {
             if (grid == null) return new Bitmap(1, 1);
@@ -32,17 +35,19 @@ namespace ScanwordGenerator
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
                 g.Clear(Color.White);
 
+                // --- ПРОХІД 1: ФОН ТА РАМКИ ---
                 for (int y = 0; y < gridH; y++)
                     for (int x = 0; x < gridW; x++)
                         DrawCellBackground(g, grid[y, x], x, y, cellSize);
 
+                // --- ПРОХІД 2: КОНТЕНТ (ТЕКСТ, КАРТИНКИ ТА СТРІЛКИ) ---
                 using (Font fontLetter = new Font("Arial", cellSize * 0.5f, FontStyle.Regular))
                 using (Font fontDef = new Font("Arial Narrow", cellSize * 0.22f, FontStyle.Regular))
                 using (StringFormat sf = new StringFormat())
                 {
                     sf.Alignment = StringAlignment.Center;
                     sf.LineAlignment = StringAlignment.Near;
-                    sf.Trimming = StringTrimming.Character; // Змінив на Character, щоб бачити шлях
+                    sf.Trimming = StringTrimming.Word;
 
                     for (int y = 0; y < gridH; y++)
                         for (int x = 0; x < gridW; x++)
@@ -79,6 +84,7 @@ namespace ScanwordGenerator
             }
             else if (cell.Type == CellType.Definition)
             {
+                // ТЕКСТОВЕ ПИТАННЯ
                 float padding = 2;
                 RectangleF textRect = new RectangleF(px + padding, py + padding, size - (padding * 2), size - (padding * 2));
 
@@ -96,13 +102,13 @@ namespace ScanwordGenerator
             }
             else if (cell.Type == CellType.Picture && cell.IsPictureMainCell)
             {
+                // КАРТИНКА
                 float imgWidth = cell.ImageWidthCells * size;
                 float imgHeight = cell.ImageHeightCells * size;
                 RectangleF imgRect = new RectangleF(px, py, imgWidth, imgHeight);
 
                 string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, cell.ImagePath);
 
-                // --- ЛОГІКА ВІДОБРАЖЕННЯ / ДІАГНОСТИКИ ---
                 if (File.Exists(fullPath))
                 {
                     try
@@ -119,22 +125,25 @@ namespace ScanwordGenerator
                 }
                 else
                 {
-                    // ДІАГНОСТИКА: Виводимо частину шляху, яку програма не знайшла
-                    // Це допоможе зрозуміти, чи шукає вона "animal_h/cat.jpg" чи щось інше
-
-                    // Відрізаємо початок шляху (D:\Projects...), залишаємо тільки кінець
-                    string relativePathDisplay = cell.ImagePath;
-
+                    string fileName = Path.GetFileName(fullPath);
                     using (Font errFont = new Font("Arial", size * 0.12f))
                     {
-                        // Виводимо червоним кольором те, що програма шукала
-                        g.DrawString($"Not Found:\n{relativePathDisplay}", errFont, Brushes.Red, imgRect, sf);
+                        g.DrawString($"Not Found:\n{relativePathDisplay(cell.ImagePath)}", errFont, Brushes.Red, imgRect, sf);
                     }
                 }
 
                 g.DrawRectangle(new Pen(Color.Gray, 2), px, py, imgWidth, imgHeight);
+
+                // Малюємо стрілку ПОВЕРХ картинки
                 DrawArrowForPicture(g, px, py, size, cell.ArrowDirection, cell.ImageWidthCells, cell.ImageHeightCells);
             }
+        }
+
+        // Допоміжний метод для скорочення шляху при помилці
+        private string relativePathDisplay(string path)
+        {
+            try { return Path.GetFileName(Path.GetDirectoryName(path)) + "/" + Path.GetFileName(path); }
+            catch { return path; }
         }
 
         private Font FitTextToRectangle(Graphics g, string text, string fontFamily, RectangleF rect, float maxSize, float minSize)
@@ -152,6 +161,7 @@ namespace ScanwordGenerator
             return font;
         }
 
+        // Стрілка для текстового питання (1х1)
         private void DrawArrowPointingToTarget(Graphics g, float defX, float defY, float size, string direction)
         {
             float arrowLen = size * 0.2f;
@@ -161,48 +171,63 @@ namespace ScanwordGenerator
             {
                 float targetX = defX + size;
                 float targetY = defY + size / 2;
-                triangle = new PointF[] { new PointF(targetX + arrowLen, targetY), new PointF(targetX, targetY - arrowLen / 1.5f), new PointF(targetX, targetY + arrowLen / 1.5f) };
+                triangle = new PointF[] {
+                    new PointF(targetX + arrowLen, targetY),
+                    new PointF(targetX, targetY - arrowLen / 1.5f),
+                    new PointF(targetX, targetY + arrowLen / 1.5f)
+                };
             }
             else
             {
                 float targetX = defX + size / 2;
                 float targetY = defY + size;
-                triangle = new PointF[] { new PointF(targetX, targetY + arrowLen), new PointF(targetX - arrowLen / 1.5f, targetY), new PointF(targetX + arrowLen / 1.5f, targetY) };
+                triangle = new PointF[] {
+                    new PointF(targetX, targetY + arrowLen),
+                    new PointF(targetX - arrowLen / 1.5f, targetY),
+                    new PointF(targetX + arrowLen / 1.5f, targetY)
+                };
             }
             g.FillPolygon(_brushArrow, triangle);
         }
 
+        // Стрілка для КАРТИНКИ (Виправлено координати)
         private void DrawArrowForPicture(Graphics g, float imgX, float imgY, float cellSize, string direction, int wCells, int hCells)
         {
-            float arrowLen = cellSize * 0.3f;
+            float arrowLen = cellSize * 0.2f; // Розмір стрілки
             PointF[] triangle;
 
-            // Розрахунок позиції стрілки
+            // Знаходимо центр рядка/колонки, з якої виходить слово
             int cellRowIndex = (hCells - 1) / 2;
             int cellColIndex = (wCells - 1) / 2;
 
             if (direction == "->")
             {
+                // Стрілка на правій грані картинки
                 float rightEdgeX = imgX + (wCells * cellSize);
                 float targetCenterY = imgY + (cellRowIndex * cellSize) + (cellSize / 2);
 
                 triangle = new PointF[] {
-                    new PointF(rightEdgeX + arrowLen, targetCenterY),
-                    new PointF(rightEdgeX, targetCenterY - arrowLen / 1.5f),
-                    new PointF(rightEdgeX, targetCenterY + arrowLen / 1.5f)
+                    new PointF(rightEdgeX + arrowLen, targetCenterY),                      
+                    new PointF(rightEdgeX, targetCenterY - arrowLen/1.5f), 
+                    new PointF(rightEdgeX, targetCenterY + arrowLen/1.5f)  
                 };
             }
             else // "v"
             {
+                // Стрілка на нижній грані картинки
                 float bottomEdgeY = imgY + (hCells * cellSize);
                 float targetCenterX = imgX + (cellColIndex * cellSize) + (cellSize / 2);
 
                 triangle = new PointF[] {
-                    new PointF(targetCenterX, bottomEdgeY + arrowLen),
-                    new PointF(targetCenterX - arrowLen / 1.5f, bottomEdgeY),
-                    new PointF(targetCenterX + arrowLen / 1.5f, bottomEdgeY)
+                    new PointF(targetCenterX, bottomEdgeY + arrowLen),                      
+                    new PointF(targetCenterX - arrowLen/1.5f, bottomEdgeY), 
+                    new PointF(targetCenterX + arrowLen/1.5f, bottomEdgeY)  
                 };
             }
+
+            // Малюємо білий контур для видимості на темному фоні
+            g.DrawPolygon(_penArrowOutline, triangle);
+            // Малюємо чорну стрілку
             g.FillPolygon(Brushes.Black, triangle);
         }
     }

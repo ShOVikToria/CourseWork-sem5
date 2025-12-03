@@ -21,10 +21,13 @@ namespace ScanwordGenerator
         // Діагностика
         public bool DictionaryHasImages { get; private set; }
 
-        public ScanwordAlgorithm(int width, int height)
+        private string _imagePrefix;
+        
+        public ScanwordAlgorithm(int width, int height, string imagePrefix)
         {
             _width = width;
             _height = height;
+            _imagePrefix = imagePrefix; // Зберігаємо префікс (напр. "animals", "cinema")
             Grid = new Cell[height, width];
             InitializeGrid();
         }
@@ -62,9 +65,9 @@ namespace ScanwordGenerator
             if (useImages)
             {
                 int maxDim = Math.Max(_width, _height);
-                if (maxDim <= 15) _targetImageCount = _rng.Next(1, 3);      // 1-2
-                else if (maxDim <= 25) _targetImageCount = _rng.Next(3, 5); // 3-4
-                else _targetImageCount = _rng.Next(5, 9);                   // 5-8
+                if (maxDim <= 15) _targetImageCount = _rng.Next(1, 3);
+                else if (maxDim <= 25) _targetImageCount = _rng.Next(3, 5);
+                else _targetImageCount = _rng.Next(5, 9);
             }
             else
             {
@@ -89,7 +92,6 @@ namespace ScanwordGenerator
                 {
                     firstWord = imageWords[_rng.Next(imageWords.Count)];
 
-                    // FIX: Отримуємо формати з правильними назвами папок
                     var validFormats = GetValidImageFormats(firstWord);
                     if (validFormats.Count > 0)
                     {
@@ -101,7 +103,6 @@ namespace ScanwordGenerator
                 }
             }
 
-            // Fallback
             if (firstWord == null)
             {
                 var startWords = allWords.Where(w => w.Term.Length >= 5).ToList();
@@ -111,7 +112,7 @@ namespace ScanwordGenerator
                 firstWord = startWords[_rng.Next(startWords.Count)];
             }
 
-            // 2. РОЗРАХУНОК ПОЗИЦІЇ
+            // 2. РОЗРАХУНОК ПОЗИЦІЇ (З ВИПРАВЛЕННЯМ ПОМИЛКИ ІНДЕКСУ)
             int startX, startY, defX, defY;
 
             if (firstIsHor)
@@ -119,6 +120,12 @@ namespace ScanwordGenerator
                 int requiredWidth = firstWord.Term.Length + defW;
                 startX = Math.Max(defW, (_width - requiredWidth) / 2);
                 startY = _height / 2;
+
+                // FIX: Перевірка правого краю (щоб слово не вилізло за ширину)
+                if (startX + firstWord.Term.Length > _width)
+                {
+                    startX = _width - firstWord.Term.Length;
+                }
 
                 defX = startX - defW;
                 defY = startY - (defH - 1) / 2;
@@ -129,14 +136,25 @@ namespace ScanwordGenerator
                 startX = _width / 2;
                 startY = Math.Max(defH, (_height - requiredHeight) / 2);
 
+                // FIX: Перевірка нижнього краю (щоб слово не вилізло за висоту)
+                if (startY + firstWord.Term.Length > _height)
+                {
+                    startY = _height - firstWord.Term.Length;
+                }
+
                 defY = startY - defH;
                 defX = startX - (defW - 1) / 2;
             }
 
+            // Клампінг для блоку визначення (щоб картинка не вилізла за межі)
             if (defX < 0) defX = 0;
             if (defX + defW > _width) defX = _width - defW;
             if (defY < 0) defY = 0;
             if (defY + defH > _height) defY = _height - defH;
+
+            // Додаткова перевірка безпеки перед записом (якщо слово все одно не лізе - перериваємо)
+            if (firstIsHor && (startX < 0 || startX + firstWord.Term.Length > _width)) return 0;
+            if (!firstIsHor && (startY < 0 || startY + firstWord.Term.Length > _height)) return 0;
 
             // 3. РОЗМІЩЕННЯ
             PlaceWord(firstWord, startX, startY, firstIsHor, defW, defH, firstImagePath, firstWord.GetRandomQuestion(), defX, defY);
@@ -171,20 +189,19 @@ namespace ScanwordGenerator
             return placedCount;
         }
 
-        // --- ВИПРАВЛЕНО НАЗВИ ПАПОК ТУТ ---
         private List<(string path, int w, int h)> GetValidImageFormats(WordData word)
         {
             var list = new List<(string, int, int)>();
 
-            // Всі папки тепер 'animals_'
+            // Замість "animals_s" використовуємо змінну _imagePrefix + "_s"
             if (!string.IsNullOrEmpty(word.Images.Square))
-                list.Add(("animals_s/" + word.Images.Square, 2, 2));
+                list.Add(($"{_imagePrefix}_s/" + word.Images.Square, 2, 2));
 
             if (!string.IsNullOrEmpty(word.Images.Horizontal))
-                list.Add(("animals_h/" + word.Images.Horizontal, 3, 2)); // Було animal_h
+                list.Add(($"{_imagePrefix}_h/" + word.Images.Horizontal, 3, 2));
 
             if (!string.IsNullOrEmpty(word.Images.Vertical))
-                list.Add(("animals_v/" + word.Images.Vertical, 2, 3));   // Було animal_v
+                list.Add(($"{_imagePrefix}_v/" + word.Images.Vertical, 2, 3));
 
             return list;
         }
@@ -212,7 +229,6 @@ namespace ScanwordGenerator
                 {
                     if (word.Term[i] == anchorChar)
                     {
-                        // 1. СПРОБА КАРТИНКИ
                         if (prioritizeImage && word.Images != null && word.Images.HasAny)
                         {
                             var formats = GetValidImageFormats(word);
@@ -232,7 +248,6 @@ namespace ScanwordGenerator
                             continue;
                         }
 
-                        // 2. СПРОБА ТЕКСТУ
                         if (!prioritizeImage || (word.Images == null || !word.Images.HasAny))
                         {
                             if (TryFitShape(word, x, y, i, tryHor, 1, 1, null, usedWords, anchors)) return true;
@@ -355,8 +370,15 @@ namespace ScanwordGenerator
             return false;
         }
 
+        // ОНОВЛЕНИЙ МЕТОД PlaceWord
         private void PlaceWord(WordData word, int wordX, int wordY, bool isHor, int defW, int defH, string imagePath, string question, int defX, int defY)
         {
+            // Розраховуємо зміщення стрілки
+            // Якщо слово горизонтальне: різниця між Y слова і Y картинки
+            // Якщо вертикальне: різниця між X слова і X картинки
+            int arrowOffset = isHor ? (wordY - defY) : (wordX - defX);
+
+            // 1. Ставимо блок визначення
             for (int dy = 0; dy < defH; dy++)
             {
                 for (int dx = 0; dx < defW; dx++)
@@ -369,6 +391,9 @@ namespace ScanwordGenerator
                         cell.ImageWidthCells = defW;
                         cell.ImageHeightCells = defH;
                         cell.IsPictureMainCell = (dx == 0 && dy == 0);
+
+                        // Зберігаємо точне зміщення для стрілки
+                        cell.ArrowOffset = arrowOffset;
                     }
                     else
                     {
@@ -381,7 +406,8 @@ namespace ScanwordGenerator
                 }
             }
 
-            for (int i = 0; i < word.Term.Length; i++)
+            // 2. Ставимо літери (без змін)
+            for (int i = 0; i < word.Length; i++)
             {
                 int lx = isHor ? wordX + i : wordX;
                 int ly = isHor ? wordY : wordY + i;

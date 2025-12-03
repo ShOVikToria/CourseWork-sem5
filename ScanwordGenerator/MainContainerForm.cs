@@ -1,66 +1,87 @@
+using System;
+using System.Windows.Forms;
+
 namespace ScanwordGenerator
 {
     public partial class MainContainerForm : Form
     {
+        // Зберігаємо поточну мову ("ua" або "en")
+        private string _currentLanguage = "ua";
+
         public MainContainerForm()
         {
-            // 1. Ініціалізація компонентів форми (створює ContentPanel)
             InitializeComponent();
 
-            // 2. Викликаємо функцію, яка завантажує початковий екран
-            // Це гарантує, що інтерфейс завантажиться першим
-            ShowStartScreen();
+            // Завантажуємо стартовий екран українською за замовчуванням
+            ShowStartScreen("ua");
         }
 
         /// <summary>
-        /// Завантажує User Control початкового екрана на головну панель.
+        /// Показує стартовий екран обраною мовою
         /// </summary>
-        private void ShowStartScreen()
+        private void ShowStartScreen(string langCode)
         {
-            // Очищаємо панель перед додаванням нового елемента
-            // (Це важливо, коли ви будете повертатися з MainScreenControl)
+            // Оновлюємо глобальну змінну мови
+            _currentLanguage = langCode;
+
+            // Очищаємо панель
             ContentPanel.Controls.Clear();
 
-            // Створюємо екземпляр User Control
-            StartScreen startScreen = new StartScreen();
+            if (langCode == "ua")
+            {
+                StartScreen_ua startScreen = new StartScreen_ua();
+                startScreen.Dock = DockStyle.Fill;
 
-            // Встановлюємо розмір та прив'язку на весь простір панелі
-            startScreen.Dock = DockStyle.Fill;
+                // 1. Якщо натиснули "ПОЧАТИ" -> йдемо на головний екран
+                startScreen.StartButtomClicked += (s, e) => ShowMainScreen();
 
-            // ПІДПИСКА на подію
-            startScreen.StartButtomClicked += StartScreen_StartButtomClicked; 
+                // 2. Якщо змінили мову в комбобоксі -> перезавантажуємо цей метод з новою мовою
+                startScreen.LanguageChanged += (s, newLang) => ShowStartScreen(newLang);
 
-            // Додаємо його на головну панель ContentPanel
-            ContentPanel.Controls.Add(startScreen);
+                ContentPanel.Controls.Add(startScreen);
+            }
+            else // "en"
+            {
+                StartScreen_en startScreen = new StartScreen_en();
+                startScreen.Dock = DockStyle.Fill;
+
+                // 1. Start button logic
+                startScreen.StartButtomClicked += (s, e) => ShowMainScreen();
+
+                // 2. Language change logic
+                startScreen.LanguageChanged += (s, newLang) => ShowStartScreen(newLang);
+
+                ContentPanel.Controls.Add(startScreen);
+            }
         }
 
+        /// <summary>
+        /// Показує основний екран генерації (відповідно до обраної мови)
+        /// </summary>
         private void ShowMainScreen()
         {
-            // 1. Очищуємо контейнер
             ContentPanel.Controls.Clear();
 
-            // 2. Створюємо та налаштовуємо User Control головного екрана
-            MainScreen mainScreen = new MainScreen();
-            mainScreen.Dock = DockStyle.Fill;
+            if (_currentLanguage == "ua")
+            {
+                MainScreen_ua mainScreen = new MainScreen_ua();
+                mainScreen.Dock = DockStyle.Fill;
 
-            mainScreen.BackButtonClicked += MainScreen_BackButtonClicked;
+                // Якщо натиснули "Назад" -> повертаємось на старт (зберігаючи мову)
+                mainScreen.BackButtonClicked += (s, e) => ShowStartScreen("ua");
 
-            // 3. Додаємо на панель
-            ContentPanel.Controls.Add(mainScreen);
+                ContentPanel.Controls.Add(mainScreen);
+            }
+            else // "en"
+            {
+                MainScreen_en mainScreen = new MainScreen_en();
+                mainScreen.Dock = DockStyle.Fill;
+
+                // Back button logic
+                mainScreen.BackButtonClicked += (s, e) => ShowStartScreen("en");
+
+                ContentPanel.Controls.Add(mainScreen);
+            }
         }
-        // Обробник події, який отримує сигнал від StartScreenControl
-        private void StartScreen_StartButtomClicked(object sender, EventArgs e)
-        {
-            // Коли подія спрацьовує, MainContainerForm сама виконує перехід
-            ShowMainScreen();
-        }
-
-        private void MainScreen_BackButtonClicked(object sender, EventArgs e)
-        {
-            // Коли сигнал "Назад" надійде, MainContainerForm знає, що робити:
-            // Повернутися до стартового екрана
-            ShowStartScreen();
-        }
-
     }
 }
