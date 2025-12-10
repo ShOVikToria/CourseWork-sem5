@@ -34,21 +34,33 @@ namespace ScanwordGenerator
             LabelBack.Click += LabelBack_Click;
         }
 
+        public ScanwordService ScanwordService
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public ScanwordRenderer ScanwordRenderer
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void InitializeTopics()
         {
             Topics.Items.Clear();
             Topics.Items.AddRange(new string[] {
                 "Animal Kingdom",        
                 "Plant Kingdom",         
-                "Geography",             
-                "Space & Weather",       
-                "Movies & TV",           
-                "Music",                 
-                "Art & Architecture",    
-                "Sports",                
+                "Geography",
+                "Universe & Science",       
+                "Movies & TV",               
                 "Cooking",               
-                "Home & Living",         
-                "Professions & Hobbies"  
+                "Mix"
             });
             Topics.SelectedIndex = 0;
         }
@@ -73,20 +85,8 @@ namespace ScanwordGenerator
                 MessageBox.Show($"Not enough words in topic '{selectedTopic}' ({themeWords.Count}).");
                 return;
             }
-            // --- ВИЗНАЧЕННЯ ПРЕФІКСУ ---
-            string imagePrefix = "animals"; // Default
 
-            if (selectedTopic == "Animal Kingdom") imagePrefix = "animals";
-            else if (selectedTopic == "Movies & TV") imagePrefix = "cinema";
-            else if (selectedTopic == "Plant Kingdom") imagePrefix = "plants";
-            else if (selectedTopic == "Space & Weather") imagePrefix = "space";
-            else if (selectedTopic == "Music") imagePrefix = "music";
-            else if (selectedTopic == "Sports") imagePrefix = "sport";
-            else if (selectedTopic == "Cooking") imagePrefix = "cooking";
-            else if (selectedTopic == "Home & Living") imagePrefix = "home";
-            else if (selectedTopic == "Professions & Hobbies") imagePrefix = "professions";
-            else if (selectedTopic == "Art & Architecture") imagePrefix = "art";
-            else if (selectedTopic == "Geography") imagePrefix = "geography";
+            string imagePrefix = "pictures";
 
             var sizeResult = GetSelectedSize();
             if (sizeResult == null) return;

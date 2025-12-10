@@ -18,7 +18,7 @@ namespace ScanwordGenerator
             };
 
             // Скільки спроб (ітерацій) робити в алгоритмі
-            var attemptsOptions = new List<int> { 5, 15, 30, 50, 100 };
+            var attemptsOptions = new List<int> { 5, 15, 30, 50 };
 
             // Варіанти з картинками і без
             var imageOptions = new List<bool> { false, true };
@@ -33,14 +33,15 @@ namespace ScanwordGenerator
             // 3. Запуск циклів (Глибоке тестування)
             foreach (var size in sizes)
             {
-                foreach (var useImages in imageOptions)
-                {
+                //foreach (var useImages in imageOptions)
+                //{
                     foreach (var attempts in attemptsOptions)
                     {
                         Stopwatch sw = Stopwatch.StartNew();
 
                         // ОНОВЛЕНИЙ ВИКЛИК: передаємо imagePrefix та attempts
-                        Cell[,] resultGrid = service.GenerateBestGrid(size.w, size.h, useImages, words, imagePrefix, attempts);
+                        //Cell[,] resultGrid = service.GenerateBestGrid(size.w, size.h, useImages, words, imagePrefix, attempts);
+                        Cell[,] resultGrid = service.GenerateBestGrid(size.w, size.h, false, words, imagePrefix, attempts);
 
                         sw.Stop();
 
@@ -55,11 +56,12 @@ namespace ScanwordGenerator
                         }
 
                         // Формуємо рядок звіту
-                        string line = $"{size.w}x{size.h};{size.w * size.h};{useImages};{attempts};{sw.ElapsedMilliseconds};{sw.Elapsed.TotalSeconds:F2};{density:F2};{wordsCount}";
+                        //string line = $"{size.w}x{size.h};{size.w * size.h};{useImages};{attempts};{sw.ElapsedMilliseconds};{sw.Elapsed.TotalSeconds:F2};{density:F2};{wordsCount}";
+                        string line = $"{size.w}x{size.h};{size.w * size.h};{attempts};{sw.ElapsedMilliseconds};{sw.Elapsed.TotalSeconds:F2};{density:F2};{wordsCount}";
 
                         csv.AppendLine(line);
                     }
-                }
+                //}
             }
 
             // 4. Збереження

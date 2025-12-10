@@ -36,6 +36,14 @@ namespace ScanwordGenerator
         [JsonIgnore]
         public int Length => Term?.Length ?? 0;
 
+        public WordImages WordImages
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public string GetRandomQuestion()
         {
             if (Questions == null || Questions.Count == 0) return "No question";

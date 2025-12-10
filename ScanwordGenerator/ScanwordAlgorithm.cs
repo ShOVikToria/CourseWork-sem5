@@ -23,7 +23,7 @@
         {
             _width = width;
             _height = height;
-            _imagePrefix = imagePrefix; // Зберігаємо префікс (напр. "animals", "cinema")
+            _imagePrefix = imagePrefix;
             Grid = new Cell[height, width];
             InitializeGrid();
         }
@@ -182,13 +182,13 @@
             var list = new List<(string, int, int)>();
 
             if (!string.IsNullOrEmpty(word.Images.Square))
-                list.Add(($"{_imagePrefix}_s/" + word.Images.Square, 2, 2));
+                list.Add(($"{_imagePrefix}/" + word.Images.Square, 2, 2));
 
             if (!string.IsNullOrEmpty(word.Images.Horizontal))
-                list.Add(($"{_imagePrefix}_h/" + word.Images.Horizontal, 3, 2));
+                list.Add(($"{_imagePrefix}/" + word.Images.Horizontal, 3, 2));
 
             if (!string.IsNullOrEmpty(word.Images.Vertical))
-                list.Add(($"{_imagePrefix}_v/" + word.Images.Vertical, 2, 3));
+                list.Add(($"{_imagePrefix}/" + word.Images.Vertical, 2, 3));
 
             return list;
         }
@@ -402,7 +402,9 @@
         public double CalculateFillPercentage()
         {
             int filled = 0;
-            for (int y = 0; y < _height; y++) for (int x = 0; x < _width; x++) if (Grid[y, x].Type != CellType.Empty) filled++;
+            for (int y = 0; y < _height; y++) 
+                for (int x = 0; x < _width; x++) 
+                    if (Grid[y, x].Type != CellType.Empty) filled++;
             return (double)filled / (_width * _height) * 100.0;
         }
 
@@ -426,6 +428,14 @@
                     };
                 }
             return clone;
+        }
+
+        public Cell Cell
+        {
+            get => default;
+            set
+            {
+            }
         }
     }
 }

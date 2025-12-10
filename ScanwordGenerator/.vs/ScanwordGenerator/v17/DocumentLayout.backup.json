@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\startscreen_en.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:startscreen_en.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\startscreen_ua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:startscreen_ua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\scanwordalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|solutionrelative:scanwordalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{606D1FEA-87A2-4043-81CF-0EAC9B374BE0}|ScanwordGenerator.csproj|d:\\projects\\3 kurs\\1\\course_work\\coursework-sem5\\scanwordgenerator\\scanwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,40 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StartScreen_en.cs",
-              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\StartScreen_en.cs",
-              "RelativeDocumentMoniker": "StartScreen_en.cs",
-              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\StartScreen_en.cs*",
-              "RelativeToolTip": "StartScreen_en.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "Title": "ScanwordAlgorithm.cs",
+              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordAlgorithm.cs",
+              "RelativeDocumentMoniker": "ScanwordAlgorithm.cs",
+              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordAlgorithm.cs",
+              "RelativeToolTip": "ScanwordAlgorithm.cs",
+              "ViewState": "AgIAAJgBAAAAAAAAAAAowJYBAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:16:40.206Z",
+              "WhenOpened": "2025-12-10T09:24:18.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StartScreen_ua.cs",
-              "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\StartScreen_ua.cs",
-              "RelativeDocumentMoniker": "StartScreen_ua.cs",
-              "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\StartScreen_ua.cs",
-              "RelativeToolTip": "StartScreen_ua.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:16:35.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ScanwordService.cs",
               "DocumentMoniker": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordService.cs",
               "RelativeDocumentMoniker": "ScanwordService.cs",
               "ToolTip": "D:\\Projects\\3 kurs\\1\\course_work\\CourseWork-sem5\\ScanwordGenerator\\ScanwordService.cs",
               "RelativeToolTip": "ScanwordService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAA0wEMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:14:38.528Z",
+              "WhenOpened": "2025-12-10T09:04:28.044Z",
               "EditorCaption": ""
             }
           ]

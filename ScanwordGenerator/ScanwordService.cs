@@ -8,6 +8,22 @@ namespace ScanwordGenerator
 
         public bool IsDictionaryLoaded => _allWords != null && _allWords.Any();
 
+        public ScanwordAlgorithm ScanwordAlgorithm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public WordData WordData
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void LoadDictionary(string fileName)
         {
             if (File.Exists(fileName))
@@ -26,7 +42,11 @@ namespace ScanwordGenerator
         {
             if (_allWords == null) return new List<WordData>();
 
-            // Порівнюємо без урахування регістру (щоб "Кіно" знайшло "кіно")
+            if (theme == "Мікс"|| theme == "Mix" || string.IsNullOrEmpty(theme))
+            {
+                return _allWords;
+            }
+            // Порівнюємо без урахування регістру
             return _allWords
                 .Where(w => w.Theme.Trim().Equals(theme.Trim(), StringComparison.OrdinalIgnoreCase))
                 .ToList();
@@ -38,7 +58,6 @@ namespace ScanwordGenerator
 
             var validWords = wordsToUse.Where(w => w.Length < width && w.Length < height).ToList();
 
-            // Передаємо префікс у конструктор
             var generator = new ScanwordAlgorithm(width, height, imagePrefix);
 
             double bestScore = -1;

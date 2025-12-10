@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ScanwordGenerator.MainScreen_ua" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ScanwordRenderer" Type="ScanwordGenerator.ScanwordRenderer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="1" />
+        <Point X="4.5" Y="1.001" />
+        <Point X="5.375" Y="1.001" />
+        <Point X="5.375" Y="1.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.594" Y="0.266" Height="0.182" Width="1.436" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ScanwordService" Type="ScanwordGenerator.ScanwordService" ManuallyRouted="true">
+      <Path>
+        <Point X="3.688" Y="1.191" />
+        <Point X="3.688" Y="2.047" />
+        <Point X="4.438" Y="2.047" />
+        <Point X="4.438" Y="2.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.247" Y="0.511" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABCEAAJSABA/SQAACoAAAGFAAIAhWBQQagFCAAQYA=</HashCode>
+      <FileName>MainScreen_ua.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ScanwordService" />
+      <Property Name="ScanwordRenderer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScanwordGenerator.MainScreen_en" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ScanwordRenderer" Type="ScanwordGenerator.ScanwordRenderer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="0.812" />
+        <Point X="6.062" Y="0.812" />
+        <Point X="6.062" Y="1.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.787" Y="0.473" Height="0.182" Width="1.427" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ScanwordService" Type="ScanwordGenerator.ScanwordService" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.812" Y="1.191" />
+        <Point X="7.812" Y="2.75" />
+        <Point X="6.24" Y="2.75" Type="JumpStart" />
+        <Point X="6.073" Y="2.75" Type="JumpEnd" />
+        <Point X="5.75" Y="2.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.812" Y="0.056" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABCEAAJSABA/SQAACoAAAGFAAIAhSBQQagFCAAQYA=</HashCode>
+      <FileName>MainScreen_en.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ScanwordService" />
+      <Property Name="ScanwordRenderer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScanwordGenerator.ScanwordService" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ScanwordAlgorithm" Type="ScanwordGenerator.ScanwordAlgorithm">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.534" Y="0.127" Height="0.182" Width="1.456" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="WordData" Type="ScanwordGenerator.WordData">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.941" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAwQAAAAAAAAAAAAAACAgAIAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ScanwordService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ScanwordAlgorithm" />
+      <Property Name="WordData" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScanwordGenerator.ScanwordRenderer" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EIAAAAAIACAAABAAAABYAAAMAAAAAQAAAAAAAAAAIAA=</HashCode>
+      <FileName>ScanwordRenderer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cell" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScanwordGenerator.ScanwordAlgorithm" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Cell" Type="ScanwordGenerator.Cell" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="4.562" />
+        <Point X="7.312" Y="4.562" />
+        <Point X="7.312" Y="3.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACgAAAQCAAgggARBDBAAAABAAAAAAAgAIiEAACEE=</HashCode>
+      <FileName>ScanwordAlgorithm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cell" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScanwordGenerator.WordData" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.25" />
+    <AssociationLine Name="WordImages" Type="ScanwordGenerator.WordImages" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="3.562" />
+        <Point X="2.533" Y="3.562" />
+        <Point X="2.533" Y="2.5" />
+        <Point X="2.75" Y="2.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.241" Y="-0.606" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAQBAAAAABBAAAAABAEEAAAAAAAAAA=</HashCode>
+      <FileName>WordData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WordImages" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScanwordGenerator.WordImages" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>WordData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScanwordGenerator.Cell" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>EAQIQAAAAAAAAAAAAAAAAIAQQAAAAAAAEQAAAAAAAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

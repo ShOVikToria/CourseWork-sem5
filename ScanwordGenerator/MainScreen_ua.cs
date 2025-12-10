@@ -35,6 +35,22 @@ namespace ScanwordGenerator
             LabelBack.Click += LabelBack_Click;
         }
 
+        public ScanwordService ScanwordService
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public ScanwordRenderer ScanwordRenderer
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void InitializeTopics()
         {
             Topics.Items.Clear();
@@ -42,14 +58,10 @@ namespace ScanwordGenerator
                 "Тваринний світ",
                 "Світ рослин",
                 "Географія",
-                "Космос і погода",
+                "Всесвіт та наука",
                 "Кіно і ТБ",        
-                "Музика",
-                "Мистецтво та архітектура",
-                "Спорт",
                 "Кулінарія",
-                "Дім та побут",
-                "Професії та хобі"
+                "Мікс"
             });
             Topics.SelectedIndex = 0;
         }
@@ -110,19 +122,7 @@ namespace ScanwordGenerator
                 return;
             }
 
-            string imagePrefix = "animals"; // За замовчуванням
-
-            if (selectedTopic == "Тваринний світ") imagePrefix = "animals";
-            else if (selectedTopic == "Кіно і ТБ") imagePrefix = "cinema";
-            else if (selectedTopic == "Світ рослин") imagePrefix = "plants";
-            else if (selectedTopic == "Космос і погода") imagePrefix = "space";
-            else if (selectedTopic == "Музика") imagePrefix = "music";
-            else if (selectedTopic == "Спорт") imagePrefix = "sport";
-            else if (selectedTopic == "Кулінарія") imagePrefix = "cooking";
-            else if (selectedTopic == "Дім та побут") imagePrefix = "home";
-            else if (selectedTopic == "Професії та хобі") imagePrefix = "professions";
-            else if (selectedTopic == "Мистецтво та архітектура") imagePrefix = "art";
-            else if (selectedTopic == "Географія") imagePrefix = "geography";
+            string imagePrefix = "pictures";
 
             // 2. Отримання налаштувань
             var sizeResult = GetSelectedSize();
@@ -141,7 +141,6 @@ namespace ScanwordGenerator
 
             try
             {
-                // --- ПЕРЕДАЄМО imagePrefix У МЕТОД ---
                 _currentGrid = _service.GenerateBestGrid(w, h, useImages, themeWords, imagePrefix, attempts: 30);
 
                 long genTime = sw.ElapsedMilliseconds;
@@ -168,9 +167,9 @@ namespace ScanwordGenerator
         {
             if (!_service.IsDictionaryLoaded) return;
 
-            var words = _service.GetWordsByTheme("Тваринний світ");
+            var words = _service.GetWordsByTheme("Мікс");
 
-            if (words.Count < 10)
+            if (words.Count < 100)
             {
                 MessageBox.Show("Замало слів для тестування!");
                 return;

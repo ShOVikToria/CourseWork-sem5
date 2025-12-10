@@ -9,6 +9,14 @@ namespace ScanwordGenerator
         private readonly Brush _brushArrow = Brushes.Black;
         private readonly Pen _penBorder = new Pen(Color.Gray, 1);
 
+        public Cell Cell
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public Bitmap DrawGrid(Cell[,] grid, int widthPx, int heightPx, bool showAnswers)
         {
             if (grid == null) return new Bitmap(1, 1);
